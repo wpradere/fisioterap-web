@@ -21,8 +21,7 @@ return (
                   src={"/logo1.png"}
                    alt="Fisioterapia profesional"
                 />
-              </div>
-              <span className="text-2xl font-bold text-gray-900">FisioSalud</span>
+              </div>              
             </div>
 
             {/* Desktop Navigation */}
