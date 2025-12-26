@@ -16,9 +16,9 @@ return (
             <div className="flex items-center gap-2">
               <div>
                 <Image 
-                  width={150}
-                  height={100}
-                  src={"/logo1.png"}
+                  width={190}
+                  height={120}
+                  src={"/logo2.png"}
                    alt="Fisioterapia profesional"
                 />
               </div>              
@@ -26,16 +26,16 @@ return (
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex gap-8">
-              <a href="#inicio" className="text-gray-600 hover:text-teal-600 font-medium transition-colors">
+              <a href="#inicio" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-2xl">
                 Inicio
               </a>
-              <a href="#servicios" className="text-gray-600 hover:text-teal-600 font-medium transition-colors">
+              <a href="#servicios" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-2xl">
                 Servicios
               </a>
-              <a href="#sobre-mi" className="text-gray-600 hover:text-teal-600 font-medium transition-colors">
+              <a href="#sobre-mi" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-2xl">
                 Sobre Mí
               </a>
-              <a href="#contacto" className="text-gray-600 hover:text-teal-600 font-medium transition-colors">
+              <a href="#contacto" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-2xl">
                 Contacto
               </a>
             </nav>
