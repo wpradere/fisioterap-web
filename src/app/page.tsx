@@ -37,10 +37,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-5">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4 leading-tight">
+              <h1 className="text-5xl md:text-6xl font-bold text-sand mb-4 leading-tight">
                 Recupera tu bienestar
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-xl text-sand mb-8">
                 Fisioterapia profesional personalizada para tu salud y calidad
                 de vida
               </p>
@@ -142,7 +142,7 @@ export default function Home() {
       {/* About Section */}
       <section
         id="sobre-mi"
-        className="py-20 bg-linear-to-br from-olive to-sand"
+        className="py-20 bg-linear-to-br from-olive to-neutral-400"
       >
         <div className="max-w-7xl mx-auto px-5">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -156,19 +156,19 @@ export default function Home() {
                 />
             </div>
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-sand mb-6">
                 Sobre Mí
               </h2>
-              <p className="text-lg text-gray-600 mb-4">
+              <p className="text-2xl text-sand mb-4 ">
                 Soy fisioterapeuta certificada con más de 10 años de experiencia
                 ayudando a personas a recuperar su bienestar y calidad de vida.
               </p>
-              <p className="text-lg text-gray-600 mb-4">
+              <p className="text-2xl text-sand mb-4">
                 Mi enfoque se basa en tratamientos personalizados que combinan
                 las mejores técnicas de fisioterapia moderna con un trato
                 cercano y profesional.
               </p>
-              <p className="text-lg text-gray-600">
+              <p className="text-2xl text-sand">
                 Estoy comprometida con tu recuperación y bienestar, ofreciendo
                 consultas tanto presenciales como virtuales para adaptarme a tus
                 necesidades.
