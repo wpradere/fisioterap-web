@@ -12,15 +12,15 @@ return (
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-2">
-          <div className="flex justify-between items-center h-23">
+          <div className="flex justify-between items-center h-35">
             {/* Logo */}
             <div className="flex items-center mb-6 ">
               <div>
                 <Link href={"/"}>
                 <Image 
-                  width={250}
+                  width={300}
                   height={120}
-                  src={"/logo2f.png"}
+                  src={"/logo3.png"}
                    alt="Fisioterapia profesional"
                 />
                 </Link>
@@ -29,16 +29,16 @@ return (
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex gap-8">
-              <a href="#inicio" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-2xl">
-                Home
-              </a>
-              <a href="#servicios" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-2xl">
+              <Link href={"/"} className='text-gray-600 hover:text-sand font-medium transition-colors text-2xl'>
+              Home
+              </Link>
+              <a href="#servicios" className="text-gray-600 hover:text-sand font-medium transition-colors text-2xl">
                 Services
               </a>
-              <a href="#sobre-mi" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-2xl">
+              <a href="#sobre-mi" className="text-gray-600 hover:text-sand font-medium transition-colors text-2xl">
                 About Us
               </a>
-              <Link href={"/contact"} className='text-gray-600 hover:text-teal-600 font-medium transition-colors text-2xl'>
+              <Link href={"/contact"} className='text-gray-600 hover:text-sand font-medium transition-colors text-2xl'>
               Contact
               </Link>
             </nav>

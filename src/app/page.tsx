@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 
 import { Video, MessageCircle, Phone, Hand, Activity } from "lucide-react";
 import Image from "next/image";
-import Dandelion from "@/components/Dandelion";
+
 import Link from "next/link";
+import FlyingLeaves from "@/components/FlyingLeaves";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,16 +29,16 @@ export default function Home() {
 
   return (
     <div>
-      <div className="opacity-40 absolute top-40 ">
-        <Dandelion size={400} autoPlay={true} interval={12000} />
-      </div>
       {/* Hero Section */}
       <section className="bg-linear-to-br from-olive to-sand py-16">
+        <div className=" opacity-25 absolute inset-0 overflow-hidden">
+          <FlyingLeaves />
+        </div>
         <div className="max-w-7xl mx-auto px-5">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold text-sand mb-4 leading-tight">
-                Recupera tu bienestar
+              <h1 className="text-4xl md:text-5xl font-bold text-sand mb-4 leading-tight">
+                Recover your well-being
               </h1>
               <p className="text-2xl text-sand mb-8">
                 At Connected Beings Coaching Services, we offer practical
@@ -48,9 +49,9 @@ export default function Home() {
                 bonds, improving emotional regulation, cultivating effective
                 parenting practices and navigating life transitions together.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 font-light">
                 <Link href={"/zoom"}>
-                  <div className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all">
+                  <div className="inline-flex   items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all   font-button">
                     <Video size={20} />
                     Schedule Zoom
                   </div>
@@ -59,7 +60,7 @@ export default function Home() {
                   href={`https://wa.me/${whatsappNumber}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-warm-write text-gray-900 font-semibold rounded-lg border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 hover:shadow-md transition-all"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-warm-write text-gray-900 font-semibold rounded-lg border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 hover:shadow-md transition-all  font-button"
                 >
                   <MessageCircle size={20} />
                   WhatsApp
@@ -83,7 +84,7 @@ export default function Home() {
       <section id="servicios" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-5">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
-          Services
+            Services
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -116,10 +117,12 @@ export default function Home() {
                 <h3 className="text-2xl font-semibold text-gray-900 mb-2">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-4 text-xl ">{service.description}</p>
+                <p className="text-gray-600 mb-4 text-xl ">
+                  {service.description}
+                </p>
                 <Link
                   href="/contact"
-                  className="text-teal-600 font-semibold hover:underline"
+                  className="text-olive font-semibold hover:underline"
                 >
                   More information →
                 </Link>
@@ -131,9 +134,9 @@ export default function Home() {
         {/* practice app */}
         <div className="flex justify-center mt-28 ">
           <Link href={"/zoom"}>
-            <div className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all">
+            <div className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all  font-button">
               <Video size={20} />
-                Schedule an appointment
+              Schedule an appointment
             </div>
           </Link>
         </div>
@@ -190,7 +193,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
     </div>
   );
 }

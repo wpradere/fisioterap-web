@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Video, MessageCircle, Phone, Hand, Activity } from "lucide-react";
+import Link from "next/link";
 
 export default function Page() {
   const whatsappNumber = "+971505206141";
@@ -39,22 +40,20 @@ export default function Page() {
           </div>
           <div className="flex justify-center ">
             <div className="p-2">
-              <a
-                href={zoomLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-soft-clay text-gray-900 font-semibold rounded-lg hover:shadow-xl transition-all"
+              <Link
+                href={"/zoom"}
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-soft-clay text-gray-900 font-semibold rounded-lg hover:shadow-xl transition-all font-button"
               >
                 <Video size={20} />
                 Zoom meeting
-              </a>
+              </Link>
             </div>
             <div className="p-2">
               <a
                 href={`https://wa.me/${whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 p-3 px-6 py-3.5 bg-olive text-gray-900 font-semibold rounded-lg border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 hover:shadow-md transition-all"
+                className="inline-flex items-center justify-center gap-2 p-3 px-6 py-3.5 bg-olive text-gray-900 font-semibold rounded-lg border-2 border-soft-clay hover:border-olive hover:text-soft-clay hover:shadow-md transition-all  font-button"
               >
                 <MessageCircle size={20} />
                 WhatsApp
