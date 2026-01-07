@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import { Menu, X, Video, MessageCircle, Phone, Hand, Activity, Heart } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,12 +16,14 @@ return (
             {/* Logo */}
             <div className="flex items-center mb-6 ">
               <div>
+                <Link href={"/"}>
                 <Image 
                   width={250}
                   height={120}
                   src={"/logo2f.png"}
                    alt="Fisioterapia profesional"
                 />
+                </Link>
               </div>              
             </div>
 
@@ -35,9 +38,9 @@ return (
               <a href="#sobre-mi" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-2xl">
                 Sobre Mí
               </a>
-              <a href="#contacto" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-2xl">
-                Contacto
-              </a>
+              <Link href={"/contact"} className='text-gray-600 hover:text-teal-600 font-medium transition-colors text-2xl'>
+              Contacto
+              </Link>
             </nav>
 
             {/* Mobile Menu Button */}

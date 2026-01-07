@@ -2,21 +2,17 @@
 
 import { useEffect, useState } from "react";
 
-import {
-  Video,
-  MessageCircle,
-  Phone,
-  Hand,
-  Activity,
-  
-} from "lucide-react";
+import { Video, MessageCircle, Phone, Hand, Activity } from "lucide-react";
 import Image from "next/image";
+import Dandelion from "@/components/Dandelion";
+import Link from "next/link";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const whatsappNumber = "573001234567";
-  const zoomLink = "https://zoom.us/tu-enlace";
+  const whatsappNumber = "+971505206141";
+  const zoomLink =
+    "https://us02web.zoom.us/j/86180541699?pwd=mjVzy7Lnd7iiNltevbZQzU8cujsc22.1";
 
   useEffect(() => {
     // Script de SimplePractice
@@ -32,6 +28,9 @@ export default function Home() {
 
   return (
     <div>
+      <div className="opacity-40 absolute top-40 ">
+        <Dandelion size={450} interval={500} />
+      </div>
       {/* Hero Section */}
       <section className="bg-linear-to-br from-olive to-sand py-16">
         <div className="max-w-7xl mx-auto px-5">
@@ -40,20 +39,22 @@ export default function Home() {
               <h1 className="text-5xl md:text-6xl font-bold text-sand mb-4 leading-tight">
                 Recupera tu bienestar
               </h1>
-              <p className="text-xl text-sand mb-8">
-                Fisioterapia profesional personalizada para tu salud y calidad
-                de vida
+              <p className="text-2xl text-sand mb-8">
+                At Connected Beings Coaching Services, we offer practical
+                skillstraining and collaborative goal-setting designed to
+                enhance emotional, behavioral, and executive functioning. Our
+                experienced and qualified family coach works with you to build a
+                step-by-step action plan aimed at strengthening relational
+                bonds, improving emotional regulation, cultivating effective
+                parenting practices and navigating life transitions together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href={zoomLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all"
-                >
-                  <Video size={20} />
-                  Agendar Zoom
-                </a>
+                <Link href={"/zoom"}>
+                  <div className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all">
+                    <Video size={20} />
+                    Agendar Zoom
+                  </div>
+                </Link>
                 <a
                   href={`https://wa.me/${whatsappNumber}`}
                   target="_blank"
@@ -78,30 +79,31 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       <section id="servicios" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-5">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
-            Nuestros Servicios
+          Services
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 icon: <Hand size={24} />,
-                title: "Terapia Manual",
+                title: "Individual Coaching:",
                 description:
-                  "Tratamiento especializado mediante técnicas manuales para aliviar el dolor y mejorar la movilidad.",
+                  "Individual Coaching: Individualized support to increase personal growth and self-discovery through a thought provoking, creative and skill building process. Couples Coaching: Cultivate intentional connection and communication to master the dialogue of partnership within the context of a repairing experience. Family Coaching: Empowering parents and children with evidence based tools to overcome emotional and developmental changes and optimize collective functioning.",
               },
               {
                 icon: <Activity size={24} />,
-                title: "Rehabilitación",
+                title: "Support Groups Coaching:",
                 description:
-                  "Programas personalizados de rehabilitación post-operatoria y recuperación de lesiones.",
+                  "Support Groups Coaching: Small-group coaching sessions that leverage the power of a shared interest to build an effective action plan for personal and family success.",
               },
               {
                 icon: <Activity size={24} />,
-                title: "Rehabilitación",
+                title: "Packages:",
                 description:
-                  "Programas personalizados de rehabilitación post-operatoria y recuperación de lesiones.",
+                  "Starter: A gateway for those beginning their coaching journey. Three 60- minute sessions for 2800 AED Short term: For shorter-term goals and immediate transformation. Six 60- minute sessions for 4800 AED Ongoing: A deeper long term commitment for growth. Ten 60-minute sessions for 7200 AED. Community groups: For individuals to connect with others who share similar experiences. Six 75- minute group sessions for 750AED.",
               },
             ].map((service, index) => (
               <div
@@ -114,30 +116,27 @@ export default function Home() {
                 <h3 className="text-2xl font-semibold text-gray-900 mb-2">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <a
-                  href="#"
+                <p className="text-gray-600 mb-4 text-xl ">{service.description}</p>
+                <Link
+                  href="/contact"
                   className="text-teal-600 font-semibold hover:underline"
                 >
                   Más información →
-                </a>
+                </Link>
               </div>
-            ))}          
+            ))}
           </div>
         </div>
 
-          {/* practice app */}
-            <div className="flex justify-center mt-28 ">
-              <a
-                  href={`https://wa.me/${whatsappNumber}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-gray-900 font-semibold rounded-lg border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 hover:shadow-md transition-all bg-soft-clay"
-                >
-                  <MessageCircle size={20}  />
-                  Agendar Cita 
-                </a>
+        {/* practice app */}
+        <div className="flex justify-center mt-28 ">
+          <Link href={"/zoom"}>
+            <div className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all">
+              <Video size={20} />
+                Schedule an appointment
             </div>
+          </Link>
+        </div>
       </section>
       {/* About Section */}
       <section
@@ -146,70 +145,52 @@ export default function Home() {
       >
         <div className="max-w-7xl mx-auto px-5">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative aspect-3/3 bg-linear-to-br from-gray-200 to-gray-300 rounded-xl flex items-center justify-center text-gray-500 overflow-hidden">
+            <div className="relative aspect-2/3 bg-linear-to-br from-gray-200 to-gray-300 rounded-xl flex items-center justify-center text-gray-500 overflow-hidden">
               <Image
-                  fill
-                  src="/img3.png"
-                  alt="Fisioterapia profesional"
-                  className="object-cover"
-                  
-                />
+                fill
+                src="/img3.png"
+                alt="Fisioterapia profesional"
+                className="object-cover"
+              />
             </div>
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-sand mb-6">
                 Sobre Mí
               </h2>
               <p className="text-2xl text-sand mb-4 ">
-                Soy fisioterapeuta certificada con más de 10 años de experiencia
-                ayudando a personas a recuperar su bienestar y calidad de vida.
+                Welcome. I am Camila Barreto, a psychotherapist and family coach
+                dedicated to providing caring, compassionate and deeply attuned
+                emotional, behavioral and executive functioning support. My
+                mission is to help individuals, couples and families alleviate
+                emotional pain while fostering a clearer, more profound
+                awareness of themselves and their life experiences that supports
+                meaningful change and conscious transformation.
               </p>
               <p className="text-2xl text-sand mb-4">
-                Mi enfoque se basa en tratamientos personalizados que combinan
-                las mejores técnicas de fisioterapia moderna con un trato
-                cercano y profesional.
+                My approach integrates a multicultural perspective and global
+                worldview. By integrating the warmth and collective values of my
+                Colombian roots with a rigorous clinical training in the United
+                States and a profound respect for the cultural nuances of Middle
+                Eastern life, I offer a reflective space where every family
+                feels truly seen. I am committed to provide life coaching
+                support that honors your heritage, your unique circumstances,
+                and prioritizes your voice in the healing process.
               </p>
               <p className="text-2xl text-sand">
-                Estoy comprometida con tu recuperación y bienestar, ofreciendo
-                consultas tanto presenciales como virtuales para adaptarme a tus
-                necesidades.
+                I have extensive training and experience treating mood
+                disorders, attachment difficulties, traumatic experiences,
+                challenging behaviors in childhood and adolescence,
+                neurodivergent parenting, marital discord, third culture
+                adjustment and family stress. I have worked in a variety of
+                settings including in person and teletherapy private practice,
+                non-profit mental health organizations, public and private
+                school settings and after school programs.
               </p>
             </div>
           </div>
         </div>
       </section>
-      <section
-        id="contacto"
-        className="py-20 bg-linear-to-r from-brown to-brown text-white text-center"
-      >
-        <div className="max-w-4xl mx-auto px-5">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            ¿Listo para comenzar tu recuperación?
-          </h2>
-          <p className="text-xl mb-8 text-teal-50">
-            Agenda tu primera consulta hoy mismo
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={zoomLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-gray-900 font-semibold rounded-lg hover:shadow-xl transition-all"
-            >
-              <Video size={20} />
-              Reunión por Zoom
-            </a>
-            <a
-              href={`https://wa.me/${whatsappNumber}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent text-white font-semibold rounded-lg border-2 border-white hover:bg-white/10 transition-all"
-            >
-              <Phone size={20} />
-              Contactar por WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 }
