@@ -1,110 +1,128 @@
 import React, { useState } from "react";
 
-
 export default function Footer() {
-
-const socialLinks = [
-    
+  const socialLinks = [
     {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/connectedbeings/',
-      color: 'hover:text-pink-600',
+      name: "Instagram",
+      url: "https://www.instagram.com/connectedbeings/",
+      color: "hover:text-pink-600",
       svg: (
         <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+          <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
         </svg>
-      )
-    },
-     {
-      name: 'Facebook',
-      url: 'https://www.facebook.com/ConnectedBeings/',
-      color: 'hover:text-blue-700',
-      svg: (
-        <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-        </svg>
-      )
+      ),
     },
     {
-      name: 'Email',
-      url: 'mailto:tu@email.com',
-      color: 'hover:text-red-500',
+      name: "Facebook",
+      url: "https://www.facebook.com/ConnectedBeings/",
+      color: "hover:text-blue-700",
       svg: (
-        <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
         </svg>
-      )
-    }
+      ),
+    },
+    {
+      name: "Email",
+      url: "mailto:tu@email.com",
+      color: "hover:text-red-500",
+      svg: (
+        <svg
+          className="w-7 h-7"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          strokeWidth={2}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+          />
+        </svg>
+      ),
+    },
   ];
 
-  
   return (
     <div>
-<footer className="bg-sand text-brown py-12">
+      <footer className="bg-sand text-brown py-12">
         <div className="max-w-7xl mx-auto px-5">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="text-xl font-semibold mb-4">ConnectedBeings</h3>
-              <p className="text-brown">
-                Fisioterapia profesional para tu bienestar
-              </p>
+              <p className="text-brown">Professional couching</p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">Enlaces</h3>
+              <h3 className="text-xl font-semibold mb-4">Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#inicio" className="text-brown hover:text-teal-400 transition-colors">
-                    Inicio
+                  <a
+                    href="#inicio"
+                    className="text-brown hover:text-teal-400 transition-colors"
+                  >
+                    Home
                   </a>
                 </li>
                 <li>
-                  <a href="#servicios" className="text-brown hover:text-teal-400 transition-colors">
-                    Servicios
+                  <a
+                    href="#servicios"
+                    className="text-brown hover:text-teal-400 transition-colors"
+                  >
+                    Services
                   </a>
                 </li>
                 <li>
-                  <a href="#sobre-mi" className="text-brown hover:text-teal-400 transition-colors">
-                    Sobre Mí
+                  <a
+                    href="#sobre-mi"
+                    className="text-brown hover:text-teal-400 transition-colors"
+                  >
+                    About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#contacto" className="text-brown hover:text-teal-400 transition-colors">
-                    Contacto
+                  <a
+                    href="#contacto"
+                    className="text-brown hover:text-teal-400 transition-colors"
+                  >
+                    Contact
                   </a>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">Nuestras redes sociales </h3>
+              <h3 className="text-xl font-semibold mb-4">
+                Social media
+              </h3>
               <ul className="space-y-2 text-brown">
-                <li>Email: contacto@fisiosalud.com</li>
-                <li>Tel: +57 300 123 4567</li>
-                <li>Bogotá, Colombia</li>
+                <li>Email: connectedbeings@gmail.com</li>
+                <li>Phone: (971) 0505206141</li>
+                <li>
+                  MBZUAI, Building 1A, Podium Level, Unit G-12 (across from
+                  Simply Thai) Masdar City, Abu Dhabi
+                </li>
               </ul>
-
             </div>
-            
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-black ">
             <div className="flex  justify-end space-x-6">
-            {socialLinks.map((social) => (
-              <a
-                key={social.name}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`text-gray-700 dark:text-amber-950 ${social.color} transition-all duration-300 transform hover:scale-125 hover:drop-shadow-lg`}
-                aria-label={social.name}
-              >
-                {social.svg}
-              </a>
-            ))}
-          </div>
-            <p>© 2025 FisioSalud. Todos los derechos reservados.</p>
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`text-gray-700 dark:text-amber-950 ${social.color} transition-all duration-300 transform hover:scale-125 hover:drop-shadow-lg`}
+                  aria-label={social.name}
+                >
+                  {social.svg}
+                </a>
+              ))}
+            </div>
+            <p>© 2025 ConnectedBeings All rights reserved </p>
           </div>
         </div>
       </footer>
-
     </div>
   );
 }

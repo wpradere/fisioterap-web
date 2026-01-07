@@ -21,10 +21,10 @@ export default function Page() {
           <div className="text-3xl">
             <div className="p-10 ">
               <h1>
-                Con una ubicación privilegiada en Masdar City, ofrecemos un
-                entorno privado y acogedor para personas, parejas y familias que
-                desean mejorar su bienestar general y recuperar una mayor
-                sensación de control y confianza en sus vidas personales.
+                Conveniently located at Masdar City, we provide a private and
+                welcoming setting for individuals, couples and families who want
+                to improve their overall wellbeing and regain a greater sense of
+                control and confidence in their personal lives.
               </h1>
             </div>
             <div className="p-10 text-3xl  ">
@@ -46,7 +46,7 @@ export default function Page() {
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-soft-clay text-gray-900 font-semibold rounded-lg hover:shadow-xl transition-all"
               >
                 <Video size={20} />
-                Reunión por Zoom
+                Zoom meeting
               </a>
             </div>
             <div className="p-2">

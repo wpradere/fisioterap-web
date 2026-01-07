@@ -30,16 +30,16 @@ return (
             {/* Desktop Navigation */}
             <nav className="hidden md:flex gap-8">
               <a href="#inicio" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-2xl">
-                Inicio
+                Home
               </a>
               <a href="#servicios" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-2xl">
-                Servicios
+                Services
               </a>
               <a href="#sobre-mi" className="text-gray-600 hover:text-teal-600 font-medium transition-colors text-2xl">
-                Sobre Mí
+                About Us
               </a>
               <Link href={"/contact"} className='text-gray-600 hover:text-teal-600 font-medium transition-colors text-2xl'>
-              Contacto
+              Contact
               </Link>
             </nav>
 
@@ -60,28 +60,28 @@ return (
                 onClick={() => setIsMenuOpen(false)}
                 className="block text-gray-600 hover:text-teal-600 font-medium"
               >
-                Inicio
+                Home
               </a>
               <a
                 href="#servicios"
                 onClick={() => setIsMenuOpen(false)}
                 className="block text-gray-600 hover:text-teal-600 font-medium"
               >
-                Servicios
+                Services
               </a>
               <a
                 href="#sobre-mi"
                 onClick={() => setIsMenuOpen(false)}
                 className="block text-gray-600 hover:text-teal-600 font-medium"
               >
-                Sobre Mí
+                About Us
               </a>
               <a
                 href="#contacto"
                 onClick={() => setIsMenuOpen(false)}
                 className="block text-gray-600 hover:text-teal-600 font-medium"
               >
-                Contacto
+                Contact
               </a>
             </nav>
           )}

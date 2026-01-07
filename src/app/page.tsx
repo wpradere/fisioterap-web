@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <div>
       <div className="opacity-40 absolute top-40 ">
-        <Dandelion size={450} interval={500} />
+        <Dandelion size={400} autoPlay={true} interval={12000} />
       </div>
       {/* Hero Section */}
       <section className="bg-linear-to-br from-olive to-sand py-16">
@@ -52,7 +52,7 @@ export default function Home() {
                 <Link href={"/zoom"}>
                   <div className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all">
                     <Video size={20} />
-                    Agendar Zoom
+                    Schedule Zoom
                   </div>
                 </Link>
                 <a
@@ -121,7 +121,7 @@ export default function Home() {
                   href="/contact"
                   className="text-teal-600 font-semibold hover:underline"
                 >
-                  Más información →
+                  More information →
                 </Link>
               </div>
             ))}
@@ -155,7 +155,7 @@ export default function Home() {
             </div>
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-sand mb-6">
-                Sobre Mí
+                About Us
               </h2>
               <p className="text-2xl text-sand mb-4 ">
                 Welcome. I am Camila Barreto, a psychotherapist and family coach

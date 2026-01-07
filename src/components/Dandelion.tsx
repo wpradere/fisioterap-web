@@ -1,5 +1,4 @@
 // components/Dandelion.tsx
-'use client';
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -30,10 +29,11 @@ const Dandelion: React.FC<DandelionProps> = ({
   const [isBlowing, setIsBlowing] = useState(false);
   const [seeds, setSeeds] = useState<Seed[]>([]);
   const [allSeeds, setAllSeeds] = useState<Seed[]>([]);
+  const [isRegenerating, setIsRegenerating] = useState(false);
 
   const generateSeeds = () => {
     const seedArray: Seed[] = [];
-    const numSeeds = 80;
+    const numSeeds = 120;
     const radius = size * 0.2;
     const phi = Math.PI * (3 - Math.sqrt(5));
     
@@ -61,7 +61,6 @@ const Dandelion: React.FC<DandelionProps> = ({
     return seedArray.sort((a, b) => a.z - b.z);
   };
 
-  // Generar semillas solo en el cliente
   useEffect(() => {
     setIsMounted(true);
     setAllSeeds(generateSeeds());
@@ -72,9 +71,16 @@ const Dandelion: React.FC<DandelionProps> = ({
       setIsBlowing(true);
       setSeeds(allSeeds);
       
+      // Después de que las semillas vuelen, inicia la regeneración
       setTimeout(() => {
         setIsBlowing(false);
         setSeeds([]);
+        setIsRegenerating(true);
+        
+        // Termina la regeneración después de 3 segundos
+        setTimeout(() => {
+          setIsRegenerating(false);
+        }, 3000);
       }, 5500);
     }
   };
@@ -89,10 +95,9 @@ const Dandelion: React.FC<DandelionProps> = ({
     }
   }, [autoPlay, interval, isBlowing, isMounted]);
 
-  const stemHeight = size * 0.5;
+  const stemHeight = size * 0.35;
   const centerSize = size * 0.1;
 
-  // No renderizar hasta que esté montado en el cliente
   if (!isMounted) {
     return (
       <div 
@@ -114,19 +119,25 @@ const Dandelion: React.FC<DandelionProps> = ({
           transformOrigin: 'bottom center',
           x: '-50%'
         }}
-        animate={isBlowing ? { rotate: [0, 5, -2, 0] } : {}}
-        transition={{ duration: 1.2 }}
+        animate={{
+          rotate: isBlowing ? [0, 8, -3, 0] : [-2, 2, -2],
+        }}
+        transition={{
+          duration: isBlowing ? 1.2 : 3,
+          repeat: isBlowing ? 0 : Infinity,
+          ease: "easeInOut"
+        }}
       >
         {/* Tallo */}
         <svg
-          width="4"
+          width="8"
           height={stemHeight}
           style={{ margin: '0 auto', display: 'block' }}
         >
           <path
-            d={`M 2 ${stemHeight} Q 2 ${stemHeight * 0.75}, 2 ${stemHeight * 0.5} Q 2 ${stemHeight * 0.25}, 2 0`}
+            d={`M 4 ${stemHeight} Q 2 ${stemHeight * 0.6}, 4 ${stemHeight * 0.3} Q 5 ${stemHeight * 0.1}, 4 0`}
             stroke="#8B6F5C"
-            strokeWidth="4"
+            strokeWidth="8"
             fill="none"
             strokeLinecap="round"
             opacity="0.8"
@@ -151,52 +162,76 @@ const Dandelion: React.FC<DandelionProps> = ({
             transition={{ duration: 1.2 }}
           />
         </div>
-      </motion.div>
 
-      {/* Semillas estáticas */}
-      {!isBlowing && allSeeds.map((seed) => (
-        <motion.div
-          key={`static-${seed.id}`}
-          className="absolute"
-          style={{
-            top: '50%',
-            left: '50%',
-            x: seed.x - 2,
-            y: seed.y - 2,
-            opacity: seed.opacity,
-            transform: `scale(${seed.scale})`,
-            zIndex: Math.round(seed.z)
-          }}
-        >
-          <div className="relative">
-            <div className="absolute" style={{ top: '-10px', left: '-5px' }}>
-              <svg width="12" height="12" viewBox="0 0 12 12">
-                <circle cx="6" cy="6" r="4" fill="white" opacity="0.7" />
-                {[0, 60, 120, 180, 240, 300].map((angle, i) => {
-                  const rad = (angle * Math.PI) / 180;
-                  const x1 = 6 + Math.cos(rad) * 2;
-                  const y1 = 6 + Math.sin(rad) * 2;
-                  const x2 = 6 + Math.cos(rad) * 4;
-                  const y2 = 6 + Math.sin(rad) * 4;
-                  return (
-                    <line
-                      key={i}
-                      x1={x1}
-                      y1={y1}
-                      x2={x2}
-                      y2={y2}
-                      stroke="white"
-                      strokeWidth="0.5"
-                      opacity="0.8"
-                    />
-                  );
-                })}
-              </svg>
+        {/* Semillas estáticas o regenerándose */}
+        {!isBlowing && allSeeds.map((seed) => (
+          <motion.div
+            key={`static-${seed.id}`}
+            className="absolute"
+            style={{
+              bottom: stemHeight,
+              left: '50%',
+              x: seed.x - 2 - 4,
+              y: seed.y - 2,
+              transform: `scale(${seed.scale})`,
+              zIndex: Math.round(seed.z)
+            }}
+            initial={isRegenerating ? { 
+              opacity: 0, 
+              scale: 0.2,
+              y: seed.y + 20
+            } : false}
+            animate={isRegenerating ? {
+              opacity: seed.opacity,
+              scale: seed.scale,
+              y: seed.y - 2,
+              x: [seed.x - 2 - 4, seed.x - 1 - 4, seed.x - 2 - 4],
+            } : {
+              opacity: seed.opacity,
+              x: [seed.x - 2 - 4, seed.x - 1 - 4, seed.x - 2 - 4],
+              y: [seed.y - 2, seed.y - 3, seed.y - 2],
+            }}
+            transition={isRegenerating ? {
+              duration: 2,
+              delay: seed.delay * 2,
+              ease: "easeOut"
+            } : {
+              duration: 2 + Math.random(),
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: seed.delay
+            }}
+          >
+            <div className="relative">
+              <div className="absolute" style={{ top: '-10px', left: '-5px' }}>
+                <svg width="12" height="12" viewBox="0 0 12 12">
+                  <circle cx="6" cy="6" r="4" fill="white" opacity="0.7" />
+                  {[0, 60, 120, 180, 240, 300].map((angle, i) => {
+                    const rad = (angle * Math.PI) / 180;
+                    const x1 = 6 + Math.cos(rad) * 2;
+                    const y1 = 6 + Math.sin(rad) * 2;
+                    const x2 = 6 + Math.cos(rad) * 4;
+                    const y2 = 6 + Math.sin(rad) * 4;
+                    return (
+                      <line
+                        key={i}
+                        x1={x1}
+                        y1={y1}
+                        x2={x2}
+                        y2={y2}
+                        stroke="white"
+                        strokeWidth="0.5"
+                        opacity="0.8"
+                      />
+                    );
+                  })}
+                </svg>
+              </div>
+              <div className="w-1 h-1.5 bg-gray-600 rounded-full opacity-60" />
             </div>
-            <div className="w-1 h-1.5 bg-gray-600 rounded-full opacity-60" />
-          </div>
-        </motion.div>
-      ))}
+          </motion.div>
+        ))}
+      </motion.div>
 
       {/* Semillas volando */}
       <AnimatePresence>
@@ -210,13 +245,13 @@ const Dandelion: React.FC<DandelionProps> = ({
               zIndex: Math.round(seed.z)
             }}
             initial={{
-              x: seed.x - 2,
+              x: seed.x - 2 - 4,
               y: seed.y - 2,
               opacity: seed.opacity,
               scale: seed.scale
             }}
             animate={{
-              x: [seed.x, seed.x + seed.drift + 300],
+              x: [seed.x - 4, seed.x + seed.drift + 300 - 4],
               y: [seed.y, seed.y - 400 + Math.random() * 100],
               opacity: [seed.opacity, seed.opacity * 0.8, 0],
               scale: [seed.scale, seed.scale * 0.8, seed.scale * 0.6],
