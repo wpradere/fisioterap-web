@@ -20,7 +20,7 @@ export default function Page() {
         </div>
         <div className="flex flex-col">
           <div className="text-3xl">
-            <div className="p-10 ">
+            <div className="p-10 font-button font-bold  ">
               <h1>
                 Conveniently located at Masdar City, we provide a private and
                 welcoming setting for individuals, couples and families who want
