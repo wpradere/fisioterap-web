@@ -29,13 +29,15 @@ export default function Home() {
 
   return (
     <div>
+  
       {/* Hero Section */}
       <section className="bg-linear-to-br from-olive to-sand py-16">
-        <div className=" opacity-25 absolute inset-0 overflow-hidden">
-          <FlyingLeaves />
-        </div>
+      
         <div className="max-w-7xl mx-auto px-5">
           <div className="grid md:grid-cols-2 gap-12 items-center">
+                  <div className=" opacity-25 absolute inset-0 overflow-hidden pointer-events-none">
+          <FlyingLeaves />
+        </div>
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-sand mb-4 leading-tight">
                 Recover your well-being
@@ -50,7 +52,7 @@ export default function Home() {
                 parenting practices and navigating life transitions together.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 font-light">
-                <Link href={"/zoom"}>
+                <Link href={"contact"}>
                   <div className="inline-flex   items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all   font-button">
                     <Video size={20} />
                     Schedule Zoom
