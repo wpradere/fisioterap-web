@@ -159,10 +159,10 @@ export default function Home() {
               />
             </div>
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-sand mb-6 font-button">
+              <h2 className="text-4xl md:text-5xl font-bold text-sand mb-6 ">
                 About Us
               </h2>
-              <p className="text-2xl text-sand mb-4 ">
+              <p className="text-2xl text-sand mb-4  font-button font-bold">
                 Welcome. I am Camila Barreto, a psychotherapist and family coach
                 dedicated to providing caring, compassionate and deeply attuned
                 emotional, behavioral and executive functioning support. My
@@ -171,7 +171,7 @@ export default function Home() {
                 awareness of themselves and their life experiences that supports
                 meaningful change and conscious transformation.
               </p>
-              <p className="text-2xl text-sand mb-4">
+              <p className="text-2xl text-sand mb-4 font-button font-bold">
                 My approach integrates a multicultural perspective and global
                 worldview. By integrating the warmth and collective values of my
                 Colombian roots with a rigorous clinical training in the United
@@ -181,7 +181,7 @@ export default function Home() {
                 support that honors your heritage, your unique circumstances,
                 and prioritizes your voice in the healing process.
               </p>
-              <p className="text-2xl text-sand">
+              <p className="text-2xl text-sand font-button font-bold">
                 I have extensive training and experience treating mood
                 disorders, attachment difficulties, traumatic experiences,
                 challenging behaviors in childhood and adolescence,
