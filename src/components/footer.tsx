@@ -51,7 +51,7 @@ export default function Footer() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="text-xl font-semibold mb-4">ConnectedBeings</h3>
-              <p className="text-brown">Professional couching</p>
+              <p className="text-brown">Professional coaching</p>
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-4">Links</h3>
