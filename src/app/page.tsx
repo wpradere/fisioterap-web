@@ -42,7 +42,7 @@ export default function Home() {
               <h1 className="text-4xl md:text-5xl font-bold text-sand mb-4 leading-tight">
                 Recover your well-being
               </h1>
-              <p className="text-2xl text-sand mb-8">
+              <p className="text-2xl text-sand mb-8 font-button font-bold">
                 At Connected Beings Coaching Services, we offer practical
                 skillstraining and collaborative goal-setting designed to
                 enhance emotional, behavioral, and executive functioning. Our
@@ -119,7 +119,7 @@ export default function Home() {
                 <h3 className="text-2xl font-semibold text-gray-900 mb-2">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-4 text-xl ">
+                <p className="text-gray-600 mb-4 text-xl font-button font-bold ">
                   {service.description}
                 </p>
                 <Link
@@ -153,13 +153,13 @@ export default function Home() {
             <div className="relative aspect-2/3 bg-linear-to-br from-gray-200 to-gray-300 rounded-xl flex items-center justify-center text-gray-500 overflow-hidden">
               <Image
                 fill
-                src="/img3.png"
+                src="/img5.png"
                 alt="Fisioterapia profesional"
                 className="object-cover"
               />
             </div>
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-sand mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-sand mb-6 font-button">
                 About Us
               </h2>
               <p className="text-2xl text-sand mb-4 ">
