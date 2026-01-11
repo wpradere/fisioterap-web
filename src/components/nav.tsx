@@ -1,13 +1,22 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react'
-import { Menu, X, Video, MessageCircle, Phone, Hand, Activity, Heart } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React, { useState } from "react";
+import {
+  Menu,
+  X,
+  Video,
+  MessageCircle,
+  Phone,
+  Hand,
+  Activity,
+  Heart,
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Nav() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-return (
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  return (
     <div className=" bg-white">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
@@ -17,29 +26,42 @@ return (
             <div className="flex items-center mb-6 ">
               <div>
                 <Link href={"/"}>
-                <Image 
-                  width={300}
-                  height={120}
-                  src={"/logo3.png"}
-                   alt="Fisioterapia profesional"
-                />
+                  <Image
+                    width={300}
+                    height={120}
+                    src={"/logo3.png"}
+                    alt="Fisioterapia profesional"
+                  />
                 </Link>
-              </div>              
+              </div>
             </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex gap-8">
-              <Link href={"/"} className='text-gray-600 hover:text-sand font-medium transition-colors text-2xl'>
-              Home
+              <Link
+                href={"/"}
+                className="text-gray-600 hover:text-sand font-medium transition-colors text-2xl"
+              >
+                Home
               </Link>
-              <a href="#servicios" className="text-gray-600 hover:text-sand font-medium transition-colors text-2xl">
-                Services
-              </a>
-              <a href="#sobre-mi" className="text-gray-600 hover:text-sand font-medium transition-colors text-2xl">
+              <Link
+                href={"/about-us"}
+                className="text-gray-600 hover:text-sand font-medium transition-colors text-2xl"
+              >
                 About Us
-              </a>
-              <Link href={"/contact"} className='text-gray-600 hover:text-sand font-medium transition-colors text-2xl'>
-              Contact
+              </Link>
+              <Link
+                href={"/services"}
+                className="text-gray-600 hover:text-sand font-medium transition-colors text-2xl"
+              >
+                Services
+              </Link>
+
+              <Link
+                href={"/contact"}
+                className="text-gray-600 hover:text-sand font-medium transition-colors text-2xl"
+              >
+                Contact
               </Link>
             </nav>
 
@@ -86,7 +108,7 @@ return (
             </nav>
           )}
         </div>
-      </header>    
+      </header>
     </div>
   );
 }

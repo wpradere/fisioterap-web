@@ -51,7 +51,11 @@ export default function Footer() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <h3 className="text-xl font-semibold mb-4">ConnectedBeings</h3>
-              <p className="text-brown">Professional coaching</p>
+              <p className="text-brown font-button font-bold tracking-wide">
+                Connected Beings Coaching Services Licensed Marriage and Family
+                Therapist #90005 (USA) Lifestyle Development Consultancy
+                #MC13480 (UAE)
+              </p>
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-4">Links</h3>
@@ -59,7 +63,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#inicio"
-                    className="text-brown hover:text-teal-400 transition-colors"
+                    className="text-brown hover:text-teal-400 transition-colors font-button font-bold tracking-wide"
                   >
                     Home
                   </a>
@@ -67,7 +71,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#servicios"
-                    className="text-brown hover:text-teal-400 transition-colors"
+                    className="text-brown hover:text-teal-400 transition-colors font-button font-bold tracking-wide"
                   >
                     Services
                   </a>
@@ -75,7 +79,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#sobre-mi"
-                    className="text-brown hover:text-teal-400 transition-colors"
+                    className="text-brown hover:text-teal-400 transition-colors font-button font-bold tracking-wide"
                   >
                     About Us
                   </a>
@@ -83,7 +87,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="#contacto"
-                    className="text-brown hover:text-teal-400 transition-colors"
+                    className="text-brown hover:text-teal-400 transition-colors font-button font-bold tracking-wide"
                   >
                     Contact
                   </a>
@@ -91,10 +95,8 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">
-                Social media
-              </h3>
-              <ul className="space-y-2 text-brown">
+              <h3 className="text-xl font-semibold mb-4">Social media</h3>
+              <ul className="space-y-2 text-brown font-button font-bold tracking-wide">
                 <li>Email: connectedbeings@gmail.com</li>
                 <li>Phone: (971) 0505206141</li>
                 <li>
@@ -119,7 +121,7 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <p>© 2025 ConnectedBeings All rights reserved </p>
+            <p className="font-button font-bold tracking-wide">© 2025 ConnectedBeings All rights reserved </p>
           </div>
         </div>
       </footer>
