@@ -3,13 +3,7 @@
 import React, { useState } from "react";
 import {
   Menu,
-  X,
-  Video,
-  MessageCircle,
-  Phone,
-  Hand,
-  Activity,
-  Heart,
+  X
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

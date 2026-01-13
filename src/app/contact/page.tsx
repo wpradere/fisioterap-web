@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Video, MessageCircle, Phone, Hand, Activity } from "lucide-react";
+import { Video, MessageCircle} from "lucide-react";
 import Link from "next/link";
 
 export default function Page() {

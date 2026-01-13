@@ -1,19 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
-import { Video, MessageCircle, Phone, Hand, Activity } from "lucide-react";
+import { useEffect } from "react";
+import { Video, MessageCircle} from "lucide-react";
 import Image from "next/image";
 
 import Link from "next/link";
 import FlyingLeaves from "@/components/FlyingLeaves";
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
 
   const whatsappNumber = "+971505206141";
-  const zoomLink =
-    "https://us02web.zoom.us/j/86180541699?pwd=mjVzy7Lnd7iiNltevbZQzU8cujsc22.1";
 
   useEffect(() => {
     // Script de SimplePractice
@@ -28,16 +25,13 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-  
-      {/* Hero Section */}
+    <div>      
       <section className="bg-linear-to-br from-soft-clay to-soft-clay py-16">
-      
         <div className="max-w-7xl mx-auto px-5">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-                  <div className=" opacity-25 absolute inset-0 overflow-hidden pointer-events-none">
-          <FlyingLeaves />
-        </div>
+            <div className=" opacity-25 absolute inset-0 overflow-hidden pointer-events-none">
+              <FlyingLeaves />
+            </div>
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-sand mb-4 leading-tight">
                 Recover your well-being
@@ -81,9 +75,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>    
-  
-      
+      </section>
     </div>
   );
 }

@@ -20,7 +20,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null);
       answer: "Yes, absolutely. All coaching sessions are completely confidential. We maintain strict privacy standards to ensure you feel safe and comfortable sharing openly during our work together."
     },
     {
-      question: "What's the difference between coaching and therapy?",
+      question: "What&apos;s the difference between coaching and therapy?",
       answer: "While both are valuable, coaching focuses on the present and future, helping you achieve specific goals and develop practical skills. Therapy often addresses past experiences and clinical mental health concerns. Coaching is action-oriented and goal-focused."
     },
     {
@@ -83,7 +83,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null);
         {/* Call to Action */}
         <div className="mt-12 sm:mt-16 text-center">
           <p className="text-stone-700 mb-6 text-base sm:text-lg">
-            Still have questions? We're here to help.
+            Still have questions? We re here to help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="px-8 py-3 bg-stone-600 text-white rounded-md hover:bg-stone-700 transition-colors duration-300 font-light w-full sm:w-auto">

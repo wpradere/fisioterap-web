@@ -1,7 +1,7 @@
 import React from "react";
 import { Video, Hand, Activity,ShieldUser } from "lucide-react";
 import Link from "next/link";
-import { User } from "lucide-react";
+
 
 export default function page() {
   return (
