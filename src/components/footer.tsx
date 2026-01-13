@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 
 export default function Footer() {
@@ -59,38 +60,46 @@ export default function Footer() {
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-4">Links</h3>
-              <ul className="space-y-2">
+              <ul className="space-y-1">
                 <li>
-                  <a
-                    href="#inicio"
-                    className="text-brown hover:text-teal-400 transition-colors font-button font-bold tracking-wide"
+                  <Link
+                    href={"/"}
+                    className="text-brown hover:text-teal-400 transition-colors"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#servicios"
-                    className="text-brown hover:text-teal-400 transition-colors font-button font-bold tracking-wide"
+                  <Link
+                    href={"/services"}
+                    className="text-brown hover:text-teal-400 transition-colors"
                   >
                     Services
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#sobre-mi"
-                    className="text-brown hover:text-teal-400 transition-colors font-button font-bold tracking-wide"
+                  <Link
+                    href={"/about-us"}
+                    className="text-brown hover:text-teal-400 transition-colors"
                   >
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#contacto"
-                    className="text-brown hover:text-teal-400 transition-colors font-button font-bold tracking-wide"
+                  <Link
+                    href={"/faq"}
+                    className="text-brown hover:text-teal-400 transition-colors"
+                  >
+                    FAQ
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={"/contact"}
+                    className="text-brown hover:text-teal-400 transition-colors"
                   >
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -121,7 +130,9 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <p className="font-button font-bold tracking-wide">© 2025 ConnectedBeings All rights reserved </p>
+            <p className="font-button font-bold tracking-wide">
+              © 2025 ConnectedBeings All rights reserved{" "}
+            </p>
           </div>
         </div>
       </footer>

@@ -56,6 +56,12 @@ export default function Nav() {
               >
                 Services
               </Link>
+                <Link
+                href={"/faq"}
+                className="text-gray-600 hover:text-sand font-medium transition-colors text-2xl"
+              >
+                FAQ
+              </Link>
 
               <Link
                 href={"/contact"}

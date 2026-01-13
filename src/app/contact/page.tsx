@@ -9,7 +9,7 @@ export default function Page() {
     "https://us02web.zoom.us/j/86180541699?pwd=mjVzy7Lnd7iiNltevbZQzU8cujsc22.1";
   return (
     <div>
-      <div className="flex  justify-center items-center max-w-full mx-auto  p-10 py-20 bg-linear-to-r from-brown to-brown text-white text-center">
+      <div className="flex  justify-center items-center max-w-full mx-auto  p-10 py-20 bg-linear-to-r from-soft-clay to-soft-clay text-white text-center">
         <div className=" bg-linear-to-br from-sand to-sand rounded-xl overflow-hidden ">
           <Image
             width={750}
@@ -42,7 +42,7 @@ export default function Page() {
             <div className="p-2">
               <Link
                 href={"/zoom"}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-soft-clay text-gray-900 font-semibold rounded-lg hover:shadow-xl transition-all font-button"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-warm-write text-gray-900 font-semibold rounded-lg hover:shadow-xl transition-all font-button "
               >
                 <Video size={20} />
                 Zoom meeting

@@ -1,6 +1,7 @@
 import React from "react";
-import { Video, Hand, Activity } from "lucide-react";
+import { Video, Hand, Activity,ShieldUser } from "lucide-react";
 import Link from "next/link";
+import { User } from "lucide-react";
 
 export default function page() {
   return (
@@ -16,19 +17,19 @@ export default function page() {
                 icon: <Hand size={24} />,
                 title: "Individual Coaching:",
                 description:
-                  "Individual Coaching: Individualized support to increase personal growth and self-discovery through a thought provoking, creative and skill building process. Couples Coaching: Cultivate intentional connection and communication to master the dialogue of partnership within the context of a repairing experience. Family Coaching: Empowering parents and children with evidence based tools to overcome emotional and developmental changes and optimize collective functioning.",
+                  "Individual Coaching: Individualized support to increase personal growth and self-discovery through a thought provoking, creative and skill building process.",
               },
               {
                 icon: <Activity size={24} />,
-                title: "Support Groups Coaching:",
+                title: "Couples Coaching:",
                 description:
-                  "Couples Coaching: Cultivate intentional connection and communication to master the dialogue of partnership within the context of a repairing experience.",
+                  "Cultivate intentional connection and communication to master the dialogue of partnership within the context of a repairing experience.",
               },
               {
-                icon: <Activity size={24} />,
-                title: "Packages:",
+                icon: <ShieldUser size={24} />,
+                title: "Family Coaching:",
                 description:
-                  "Starter: A gateway for those beginning their coaching journey. Three 60- minute sessions for 2800 AED Short term: For shorter-term goals and immediate transformation. Six 60- minute sessions for 4800 AED Ongoing: A deeper long term commitment for growth. Ten 60-minute sessions for 7200 AED. Community groups: For individuals to connect with others who share similar experiences. Six 75- minute group sessions for 750AED.",
+                  "Empowering parents and children with evidence based tools to overcome emotional and developmental changes and optimize collective functioning.",
               },
             ].map((service, index) => (
               <div
