@@ -38,10 +38,10 @@ const [openIndex, setOpenIndex] = useState<number | null>(null);
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-stone-700 mb-4 ">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-light text-sanddark mb-4 ">
             Frequently Asked Questions
           </h1>
-          <p className="text-base sm:text-lg text-stone-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-sanddark max-w-2xl mx-auto font-button font-bold tracking-wide">
             Find answers to common questions about our coaching services
           </p>
         </div>
@@ -82,7 +82,7 @@ const [openIndex, setOpenIndex] = useState<number | null>(null);
 
         {/* Call to Action */}
         <div className="mt-12 sm:mt-16 text-center">
-          <p className="text-stone-700 mb-6 text-base sm:text-lg">
+          <p className="text-sanddark mb-6 text-base sm:text-2xl font-button font-bold tracking-wide">
             Still have questions? We re here to help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

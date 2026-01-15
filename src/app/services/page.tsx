@@ -1,9 +1,15 @@
+'use client';
+
 import React from "react";
-import { Video, Hand, Activity,ShieldUser } from "lucide-react";
+import { Video, Hand, Activity, ShieldUser } from "lucide-react";
 import Link from "next/link";
 
-
 export default function page() {
+  const handleBooking = () => {
+    // Abre el enlace de reserva de SimplePractice
+    window.open("TU_ENLACE_DE_SIMPLEPRACTICE", "_blank");
+  };
+
   return (
     <div>
       <section className="py-20 bg-white">
@@ -55,16 +61,17 @@ export default function page() {
             ))}
           </div>
         </div>
-        
       </section>
       <section>
         <div className="max-w-7xl mx-auto px-5 ">
           <div className="mb-4 ">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12" >Packages: </h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
+              Packages:{" "}
+            </h2>
 
             <h3 className="text-gray-600 mb-4 text-xl font-button font-bold tracking-wide pb-20 ">
-              Starter: A gateway for those beginning their coaching
-              journey. Three 60- minute sessions for 2800 AED Short term: For
+              Starter: A gateway for those beginning their coaching journey.
+              Three 60- minute sessions for 2800 AED Short term: For
               shorter-term goals and immediate transformation. Six 60- minute
               sessions for 4800 AED Ongoing: A deeper long term commitment for
               growth. Ten 60-minute sessions for 7200 AED. Community groups: For
@@ -75,12 +82,12 @@ export default function page() {
         </div>
         {/* practice app */}
         <div className="flex justify-center pb-14 ">
-          <Link href={"/zoom"}>
-            <div className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all  font-button ">
-              <Video size={20} />
-              Schedule an appointment
-            </div>
-          </Link>
+          <button
+            onClick={handleBooking}
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all  font-button "
+          >
+            Schedule an appointment
+          </button>
         </div>
       </section>
     </div>

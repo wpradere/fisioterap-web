@@ -57,8 +57,8 @@ export default function Footer() {
                 #MC13480 (UAE)
               </p>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Links</h3>
+            <div className="ml-20">
+              <h3 className="text-xl font-semibold ">Links</h3>
               <ul className="space-y-1">
                 <li>
                   <Link
@@ -105,18 +105,8 @@ export default function Footer() {
             <div>
               <h3 className="text-xl font-semibold mb-4">Social media</h3>
               <ul className="space-y-2 text-brown font-button font-bold tracking-wide">
-                <li>Email: connectedbeings@gmail.com</li>
-                <li>Phone: (971) 0505206141</li>
-                <li>
-                  MBZUAI, Building 1A, Podium Level, Unit G-12 (across from
-                  Simply Thai) Masdar City, Abu Dhabi
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-black ">
-            <div className="flex  justify-end space-x-6">
-              {socialLinks.map((social) => (
+                <li className="flex  justify-normal space-x-14 mt-9">
+                        {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.url}
@@ -128,6 +118,13 @@ export default function Footer() {
                   {social.svg}
                 </a>
               ))}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 pt-8 text-center text-black ">
+            <div >
+        
             </div>
             <p className="font-button font-bold tracking-wide">
               © 2025 ConnectedBeings All rights reserved{" "}

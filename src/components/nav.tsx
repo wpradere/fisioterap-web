@@ -54,7 +54,7 @@ export default function Nav() {
                 href={"/faq"}
                 className="text-gray-600 hover:text-sand font-medium transition-colors text-2xl"
               >
-                FAQ
+                 Q&A
               </Link>
 
               <Link
@@ -77,29 +77,29 @@ export default function Nav() {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <nav className="md:hidden pb-4 space-y-3">
-              <a
-                href="#inicio"
+              <Link
+                href="/"
                 onClick={() => setIsMenuOpen(false)}
                 className="block text-gray-600 hover:text-teal-600 font-medium"
               >
                 Home
-              </a>
-              <a
-                href="#servicios"
-                onClick={() => setIsMenuOpen(false)}
-                className="block text-gray-600 hover:text-teal-600 font-medium"
-              >
-                Services
-              </a>
-              <a
-                href="#sobre-mi"
+              </Link>
+              <Link
+                href="/about-us"
                 onClick={() => setIsMenuOpen(false)}
                 className="block text-gray-600 hover:text-teal-600 font-medium"
               >
                 About Us
-              </a>
+              </Link>
+              <Link
+                href="/services"
+                onClick={() => setIsMenuOpen(false)}
+                className="block text-gray-600 hover:text-teal-600 font-medium"
+              >
+                Services
+              </Link>              
               <a
-                href="#contacto"
+                href="/contact"
                 onClick={() => setIsMenuOpen(false)}
                 className="block text-gray-600 hover:text-teal-600 font-medium"
               >

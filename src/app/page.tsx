@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import { Video, MessageCircle} from "lucide-react";
 import Image from "next/image";
 
@@ -12,17 +11,7 @@ export default function Home() {
 
   const whatsappNumber = "+971505206141";
 
-  useEffect(() => {
-    // Script de SimplePractice
-    const script = document.createElement("script");
-    script.src = "https://www.simplepractice.com/scheduling_widget.js";
-    script.async = true;
-    document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
 
   return (
     <div>      
@@ -33,10 +22,10 @@ export default function Home() {
               <FlyingLeaves />
             </div>
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-sand mb-4 leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-sanddark mb-4 leading-tight">
                 Recover your well-being
               </h1>
-              <p className="text-2xl text-sand mb-8 font-button font-bold tracking-wide">
+              <p className="text-2xl text-sanddark mb-8 font-button font-bold tracking-wide">
                 At Connected Beings Coaching Services, we offer practical
                 skillstraining and collaborative goal-setting designed to
                 enhance emotional, behavioral, and executive functioning. Our
