@@ -1,20 +1,18 @@
 "use client";
 
-import { Video, MessageCircle} from "lucide-react";
+import { Video, MessageCircle } from "lucide-react";
 import Image from "next/image";
 
 import Link from "next/link";
 import FlyingLeaves from "@/components/FlyingLeaves";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Home() {
-  
-
   const whatsappNumber = "+971505206141";
-
-
+  const { t } = useLanguage();
 
   return (
-    <div>      
+    <div>
       <section className="bg-linear-to-br from-soft-clay to-soft-clay py-16">
         <div className="max-w-7xl mx-auto px-5">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -23,22 +21,19 @@ export default function Home() {
             </div>
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-sanddark mb-4 leading-tight">
-                Recover your well-being
+                {t("home.tagline")}
               </h1>
               <p className="text-2xl text-sanddark mb-8 font-button font-bold tracking-wide">
-                At Connected Beings Coaching Services, we offer practical
-                skillstraining and collaborative goal-setting designed to
-                enhance emotional, behavioral, and executive functioning. Our
-                experienced and qualified family coach works with you to build a
-                step-by-step action plan aimed at strengthening relational
-                bonds, improving emotional regulation, cultivating effective
-                parenting practices and navigating life transitions together.
+                {t("home.intro1")}
+              </p>
+              <p className="text-2xl text-sanddark mb-8 font-button font-bold tracking-wide">
+                {t("home.intro2")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 font-light">
                 <Link href={"contact"}>
                   <div className="inline-flex   items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all   font-button">
                     <Video size={20} />
-                    Schedule Zoom
+                    {t("home.scheduleZoom")}
                   </div>
                 </Link>
                 <a
@@ -48,7 +43,7 @@ export default function Home() {
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-warm-write text-gray-900 font-semibold rounded-lg border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 hover:shadow-md transition-all  font-button"
                 >
                   <MessageCircle size={20} />
-                  WhatsApp
+                  {t("home.whatsapp")}
                 </a>
               </div>
             </div>

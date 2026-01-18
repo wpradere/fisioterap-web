@@ -4,6 +4,7 @@ import "./globals.css";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import localFont from 'next/font/local'
+import { LanguageProvider } from "@/context/LanguageContext";
 
 
 const dreamAvenue = localFont({
@@ -23,6 +24,9 @@ const lato = Lato({
 export const metadata: Metadata = {
   title: "ConnectectedBeingd App",
   description: "Coaching Service",
+  icons: {
+    icon: "/Favicon - compatibilidad general.svg",
+  },
 };
 
 export default function RootLayout({
@@ -35,10 +39,11 @@ export default function RootLayout({
       <body
         className={dreamAvenue.className}
       >
-       <Nav/> 
-        {children}
-        <Footer/>
-
+        <LanguageProvider>
+          <Nav/>
+          {children}
+          <Footer/>
+        </LanguageProvider>
       </body>
     </html>
   );

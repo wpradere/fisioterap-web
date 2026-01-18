@@ -1,6 +1,11 @@
+"use client";
+
 import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   const socialLinks = [
     {
       name: "Instagram",
@@ -50,22 +55,22 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-5">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4">ConnectedBeings</h3>
+              <h3 className="text-xl font-semibold mb-4">
+                {t("footer.companyName")}
+              </h3>
               <p className="text-brown font-button font-bold tracking-wide">
-                Connected Beings Coaching Services Licensed Marriage and Family
-                Therapist #90005 (USA) Lifestyle Development Consultancy
-                #MC13480 (UAE)
+                {t("footer.license")}
               </p>
             </div>
             <div className="ml-20">
-              <h3 className="text-xl font-semibold ">Links</h3>
+              <h3 className="text-xl font-semibold ">{t("footer.links")}</h3>
               <ul className="space-y-1">
                 <li>
                   <Link
                     href={"/"}
                     className="text-brown hover:text-teal-400 transition-colors"
                   >
-                    Home
+                    {t("nav.home")}
                   </Link>
                 </li>
                 <li>
@@ -73,7 +78,7 @@ export default function Footer() {
                     href={"/services"}
                     className="text-brown hover:text-teal-400 transition-colors"
                   >
-                    Services
+                    {t("nav.services")}
                   </Link>
                 </li>
                 <li>
@@ -81,7 +86,7 @@ export default function Footer() {
                     href={"/about-us"}
                     className="text-brown hover:text-teal-400 transition-colors"
                   >
-                    About Us
+                    {t("nav.aboutUs")}
                   </Link>
                 </li>
                 <li>
@@ -89,7 +94,7 @@ export default function Footer() {
                     href={"/faq"}
                     className="text-brown hover:text-teal-400 transition-colors"
                   >
-                    FAQ
+                    {t("nav.qa")}
                   </Link>
                 </li>
                 <li>
@@ -97,37 +102,35 @@ export default function Footer() {
                     href={"/contact"}
                     className="text-brown hover:text-teal-400 transition-colors"
                   >
-                    Contact
+                    {t("nav.contact")}
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">Social media</h3>
+              <h3 className="text-xl font-semibold mb-4">{t("footer.socialMedia")}</h3>
               <ul className="space-y-2 text-brown font-button font-bold tracking-wide">
                 <li className="flex  justify-normal space-x-14 mt-9">
-                        {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`text-gray-700 dark:text-amber-950 ${social.color} transition-all duration-300 transform hover:scale-125 hover:drop-shadow-lg`}
-                  aria-label={social.name}
-                >
-                  {social.svg}
-                </a>
-              ))}
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`text-gray-700 dark:text-amber-950 ${social.color} transition-all duration-300 transform hover:scale-125 hover:drop-shadow-lg`}
+                      aria-label={social.name}
+                    >
+                      {social.svg}
+                    </a>
+                  ))}
                 </li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-black ">
-            <div >
-        
-            </div>
+            <div></div>
             <p className="font-button font-bold tracking-wide">
-              © 2025 ConnectedBeings All rights reserved{" "}
+              {t("footer.copyright")}
             </p>
           </div>
         </div>

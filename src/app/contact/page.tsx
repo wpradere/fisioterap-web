@@ -1,12 +1,15 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { Video, MessageCircle} from "lucide-react";
 import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Page() {
   const whatsappNumber = "+971505206141";
-  const zoomLink =
-    "https://us02web.zoom.us/j/86180541699?pwd=mjVzy7Lnd7iiNltevbZQzU8cujsc22.1";
+  const { t } = useLanguage();
+
   return (
     <div>
       <div className="flex  justify-center items-center max-w-full mx-auto  p-10 py-20 bg-linear-to-r from-soft-clay to-soft-clay text-white text-center">
@@ -22,20 +25,13 @@ export default function Page() {
           <div className="text-3xl">
             <div className="p-10 font-button font-bold  ">
               <h1>
-                Conveniently located at Masdar City, we provide a private and
-                welcoming setting for individuals, couples and families who want
-                to improve their overall wellbeing and regain a greater sense of
-                control and confidence in their personal lives.
+                {t("contact.location")}
               </h1>
             </div>
             <div className="p-10 text-3xl  ">
-              <p>
-                {" "}
-                Address: MBZUAI, Building 1A, Podium Level, Unit G-12 (across
-                from Simply Thai) Masdar City, Abu Dhabi
-              </p>
-              <p> Phone: (971) 0505206141</p>
-              <p> Email : connectedbeings@gmail.com</p>
+              <p>{t("contact.address")}</p>
+              <p>{t("contact.phone")}</p>
+              <p>{t("contact.email")}</p>
             </div>
           </div>
           <div className="flex justify-center ">
@@ -45,7 +41,7 @@ export default function Page() {
                 className="inline-flex   items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all   font-button"
               >
                 <Video size={20} />
-                Zoom meeting
+                {t("contact.zoomMeeting")}
               </Link>
             </div>
             <div className="p-2">
@@ -56,7 +52,7 @@ export default function Page() {
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-warm-write text-gray-900 font-semibold rounded-lg border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 hover:shadow-md transition-all  font-button"
               >
                 <MessageCircle size={20} />
-                WhatsApp
+                {t("home.whatsapp")}
               </a>
             </div>
           </div>

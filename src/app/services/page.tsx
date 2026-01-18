@@ -1,61 +1,114 @@
 'use client';
 
 import React from "react";
-import { Video, Hand, Activity, ShieldUser } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext";
 
-export default function page() {
+export default function Offerings() {
+  const { t } = useLanguage();
+
   const handleBooking = () => {
-    // Abre el enlace de reserva de SimplePractice
-    window.open("TU_ENLACE_DE_SIMPLEPRACTICE", "_blank");
+    window.open("https://camila-barreto.clientsecure.me", "_blank");
   };
+
+  const services = [
+    {
+      iconPath: "/Individual Icon.svg",
+      titleKey: "services.individual.title",
+      introKey: "services.individual.intro",
+      subtitleKey: "services.individual.subtitle",
+      goalKeys: [
+        "services.individual.goal1",
+        "services.individual.goal2",
+        "services.individual.goal3",
+        "services.individual.goal4",
+        "services.individual.goal5",
+        "services.individual.goal6"
+      ]
+    },
+    {
+      iconPath: "/Couples  Icon.svg",
+      titleKey: "services.couples.title",
+      introKey: "services.couples.intro",
+      subtitleKey: "services.couples.subtitle",
+      goalKeys: [
+        "services.couples.goal1",
+        "services.couples.goal2",
+        "services.couples.goal3",
+        "services.couples.goal4",
+        "services.couples.goal5",
+        "services.couples.goal6"
+      ]
+    },
+    {
+      iconPath: "/Family  Icon.svg",
+      titleKey: "services.family.title",
+      introKey: "services.family.intro",
+      subtitleKey: "services.family.subtitle",
+      goalKeys: [
+        "services.family.goal1",
+        "services.family.goal2",
+        "services.family.goal3",
+        "services.family.goal4",
+        "services.family.goal5",
+        "services.family.goal6"
+      ]
+    },
+    {
+      iconPath: "/Groups Icon.svg",
+      titleKey: "services.groups.title",
+      introKey: "services.groups.intro",
+      subtitleKey: "services.groups.subtitle",
+      goalKeys: [
+        "services.groups.goal1",
+        "services.groups.goal2",
+        "services.groups.goal3",
+        "services.groups.goal4",
+        "services.groups.goal5",
+        "services.groups.goal6"
+      ]
+    },
+  ];
 
   return (
     <div>
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-5">
+        <div className="max-w-8xl mx-auto px-8">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
-            Services
+            {t("services.title")}
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Hand size={24} />,
-                title: "Individual Coaching:",
-                description:
-                  "Individual Coaching: Individualized support to increase personal growth and self-discovery through a thought provoking, creative and skill building process.",
-              },
-              {
-                icon: <Activity size={24} />,
-                title: "Couples Coaching:",
-                description:
-                  "Cultivate intentional connection and communication to master the dialogue of partnership within the context of a repairing experience.",
-              },
-              {
-                icon: <ShieldUser size={24} />,
-                title: "Family Coaching:",
-                description:
-                  "Empowering parents and children with evidence based tools to overcome emotional and developmental changes and optimize collective functioning.",
-              },
-            ].map((service, index) => (
+          <div className="grid md:grid-cols-4 gap-8">
+            {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-gray-50 p-8 rounded-xl hover:-translate-y-2 hover:shadow-xl transition-all"
+                className=" p-8 rounded-xl hover:-translate-y-2 hover:shadow-xl transition-all"
               >
                 <div className="w-12 h-12 bg-linear-to-br from-soft-clay to-soft-clay rounded-lg flex items-center justify-center text-white mb-4">
-                  {service.icon}
+                  <Image
+                    src={service.iconPath}
+                    alt={t(service.titleKey)}
+                    width={24}
+                    height={24}
+                  />
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-2">
-                  {service.title}
+                  {t(service.titleKey)}
                 </h3>
-                <p className="text-gray-600 mb-4 text-xl font-button font-bold tracking-wide ">
-                  {service.description}
-                </p>
+                <div className="text-gray-600 mb-4 text-xl font-button font-bold tracking-wide">
+                  <p className="mb-1">{t(service.introKey)}</p>
+                  <p className="mb-1">{t(service.subtitleKey)}</p>
+                  <ul className="list-disc list-inside space-y-1 text-lg">
+                    {service.goalKeys.map((goalKey, i) => (
+                      <li key={i}>{t(goalKey)}</li>
+                    ))}
+                  </ul>
+                </div>
                 <Link
                   href="/contact"
                   className="text-soft-clay font-semibold hover:underline"
                 >
-                  More information →
+                  {t("services.moreInfo")}
                 </Link>
               </div>
             ))}
@@ -63,30 +116,12 @@ export default function page() {
         </div>
       </section>
       <section>
-        <div className="max-w-7xl mx-auto px-5 ">
-          <div className="mb-4 ">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
-              Packages:{" "}
-            </h2>
-
-            <h3 className="text-gray-600 mb-4 text-xl font-button font-bold tracking-wide pb-20 ">
-              Starter: A gateway for those beginning their coaching journey.
-              Three 60- minute sessions for 2800 AED Short term: For
-              shorter-term goals and immediate transformation. Six 60- minute
-              sessions for 4800 AED Ongoing: A deeper long term commitment for
-              growth. Ten 60-minute sessions for 7200 AED. Community groups: For
-              individuals to connect with others who share similar experiences.
-              Six 75- minute group sessions for 750AED.
-            </h3>
-          </div>
-        </div>
-        {/* practice app */}
         <div className="flex justify-center pb-14 ">
           <button
             onClick={handleBooking}
             className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all  font-button "
           >
-            Schedule an appointment
+            {t("services.scheduleAppointment")}
           </button>
         </div>
       </section>
