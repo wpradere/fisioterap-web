@@ -32,10 +32,10 @@ export default function Packages() {
   return (
     <section className="bg-gray-50">
       <div className="px-5">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12 mt-5">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12 mt-16">
           {t("packages.title")}
         </h2>
-        <div className="grid md:grid-rows-3 gap-8 justify-center">
+        <div className="grid md:grid-rows-3 gap-8 justify-center m-28">
           {packages.map((pkg, index) => (
             <div
               key={index}

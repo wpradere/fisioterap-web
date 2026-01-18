@@ -78,7 +78,7 @@ export default function Offerings() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
             {t("services.title")}
           </h2>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 m-36">
             {services.map((service, index) => (
               <div
                 key={index}

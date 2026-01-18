@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
@@ -9,6 +9,7 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const [isProductsMenuOpen, setIsProductsMenuOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
 
   return (
@@ -57,12 +58,29 @@ export default function Nav() {
               >
                 {t("nav.packages")}
               </Link>
-              <Link
-                href={"/pacages"}
-                className="text-gray-600 hover:text-sand font-medium transition-colors text-2xl"
-              >
-                {t("nav.products")}
-              </Link>
+              {/* Products Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => setIsProductsMenuOpen(!isProductsMenuOpen)}
+                  className="flex items-center gap-1 text-gray-600 hover:text-sand font-medium transition-colors text-2xl"
+                >
+                  {t("nav.products")}
+                  <ChevronDown size={20} className={`transition-transform ${isProductsMenuOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {isProductsMenuOpen && (
+                  <div className="absolute left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg py-1 min-w-[160px]">
+                    <a
+                      href="https://shopify.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setIsProductsMenuOpen(false)}
+                      className="block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-sand transition-colors"
+                    >
+                      {t("nav.products")}
+                    </a>
+                  </div>
+                )}
+              </div>
               <Link
                 href={"/faq"}
                 className="text-gray-600 hover:text-sand font-medium transition-colors text-2xl"
@@ -195,6 +213,32 @@ export default function Nav() {
               >
                 {t("nav.packages")}
               </Link>
+              {/* Products Dropdown Mobile */}
+              <div>
+                <button
+                  onClick={() => setIsProductsMenuOpen(!isProductsMenuOpen)}
+                  className="flex items-center gap-1 text-gray-600 hover:text-teal-600 font-medium"
+                >
+                  {t("nav.products")}
+                  <ChevronDown size={16} className={`transition-transform ${isProductsMenuOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {isProductsMenuOpen && (
+                  <div className="ml-4 mt-2 space-y-2">
+                    <a
+                      href="https://shopify.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => {
+                        setIsProductsMenuOpen(false);
+                        setIsMenuOpen(false);
+                      }}
+                      className="block text-gray-600 hover:text-teal-600 font-medium"
+                    >
+                      {t("nav.products")}
+                    </a>
+                  </div>
+                )}
+              </div>
               <Link
                 href="/faq"
                 onClick={() => setIsMenuOpen(false)}
