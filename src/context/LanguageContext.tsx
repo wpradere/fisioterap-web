@@ -25,7 +25,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.services": "Services",
 
     // Home
-    "home.tagline": "A space for connection and growth. This is the Tag Line",
+    "home.tagline": "A space for connection and growth.",
     "home.intro1": "At Connected Beings Coaching Services, we offer practical skills training and collaborative goal-setting designed to enhance emotional, behavioral, and executive functioning. Our experienced and qualified family coach works with you to build a step-by-step action plan aimed at strengthening relational bonds, improving emotional regulation, cultivating effective parenting practices and navigating life transitions together.",
     "home.intro2": "Conveniently located at Masdar City, we provide a private and welcoming setting for individuals, couples and families who want to improve their overall wellbeing and regain a greater sense of control and confidence in their personal lives.",
     "home.scheduleZoom": "Schedule Zoom",
@@ -134,7 +134,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.services": "Servicios",
 
     // Home
-    "home.tagline": "Un espacio para la conexión y el crecimiento. Esta es la Línea de Etiqueta",
+    "home.tagline": "Un espacio para la conexión y el crecimiento.",
     "home.intro1": "En Connected Beings Coaching Services, ofrecemos entrenamiento práctico de habilidades y establecimiento colaborativo de metas diseñados para mejorar el funcionamiento emocional, conductual y ejecutivo. Nuestro experimentado y calificado coach familiar trabaja contigo para construir un plan de acción paso a paso destinado a fortalecer los vínculos relacionales, mejorar la regulación emocional, cultivar prácticas de crianza efectivas y navegar juntos las transiciones de vida.",
     "home.intro2": "Convenientemente ubicados en Masdar City, proporcionamos un entorno privado y acogedor para individuos, parejas y familias que desean mejorar su bienestar general y recuperar un mayor sentido de control y confianza en sus vidas personales.",
     "home.scheduleZoom": "Agendar Zoom",
