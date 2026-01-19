@@ -84,12 +84,12 @@ export default function Offerings() {
                 key={index}
                 className=" p-8 rounded-xl hover:-translate-y-2 hover:shadow-xl transition-all"
               >
-                <div className="w-12 h-12 bg-linear-to-br from-soft-clay to-soft-clay rounded-lg flex items-center justify-center text-white mb-4">
+                <div className="w-20 h-20 bg-linear-to-br from-soft-clay to-soft-clay rounded-lg flex items-center justify-center text-white mb-4">
                   <Image
                     src={service.iconPath}
                     alt={t(service.titleKey)}
-                    width={24}
-                    height={24}
+                    width={70}
+                    height={70}
                   />
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-2">
