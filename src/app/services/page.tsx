@@ -14,7 +14,7 @@ export default function Offerings() {
 
   const services = [
     {
-      iconPath: "/Individual Icon.svg",
+      iconPath: "/Individual transparent Icon.png",
       titleKey: "services.individual.title",
       introKey: "services.individual.intro",
       subtitleKey: "services.individual.subtitle",
@@ -28,7 +28,7 @@ export default function Offerings() {
       ]
     },
     {
-      iconPath: "/Couples  Icon.svg",
+      iconPath: "/Couples Icon Transparent.png",
       titleKey: "services.couples.title",
       introKey: "services.couples.intro",
       subtitleKey: "services.couples.subtitle",
@@ -42,7 +42,7 @@ export default function Offerings() {
       ]
     },
     {
-      iconPath: "/Family  Icon.svg",
+      iconPath: "/Family Transparent .png",
       titleKey: "services.family.title",
       introKey: "services.family.intro",
       subtitleKey: "services.family.subtitle",
@@ -56,7 +56,7 @@ export default function Offerings() {
       ]
     },
     {
-      iconPath: "/Groups Icon.svg",
+      iconPath: "/Groups Icon .png",
       titleKey: "services.groups.title",
       introKey: "services.groups.intro",
       subtitleKey: "services.groups.subtitle",
