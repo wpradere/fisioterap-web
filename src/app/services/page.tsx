@@ -73,12 +73,12 @@ export default function Offerings() {
 
   return (
     <div>
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white min-h-screen">
         <div className="max-w-8xl mx-auto px-8">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
             {t("services.title")}
           </h2>
-          <div className="grid md:grid-cols-2 gap-8 m-36">
+          <div className="grid md:grid-cols-2 gap-8 m-2 md:m-36">
             {services.map((service, index) => (
               <div
                 key={index}
