@@ -14,12 +14,18 @@ export default function Page() {
     <div>
       <div className="flex  justify-center items-center max-w-full mx-auto  p-10 py-20 bg-linear-to-r from-soft-clay to-soft-clay text-white text-center">
         <div className=" bg-linear-to-br from-sand to-sand rounded-xl overflow-hidden ">
+        <Link
+          href={"https://www.google.com/maps/place/Simply+Thai+Restaurant+Abu+Dhabi/@24.4337969,54.6176601,21z/data=!4m6!3m5!1s0x3e5e49174ec50009:0x5dbb4cb6c6350f10!8m2!3d24.4338154!4d54.6178254!16s%2Fg%2F11t_zhsc9c?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D"}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Image
             width={750}
             height={250}
-            src="/img2.png"
+            src="/map.png"
             alt="Fisioterapia profesional"
           />
+        </Link>
         </div>
         <div className="flex flex-col">
           <div className="text-3xl">
