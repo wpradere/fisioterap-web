@@ -8,10 +8,6 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function Offerings() {
   const { t } = useLanguage();
 
-  const handleBooking = () => {
-    window.open("https://camila-barreto.clientsecure.me", "_blank");
-  };
-
   const services = [
     {
       iconPath: "/Individual transparent Icon.png",
@@ -117,12 +113,15 @@ export default function Offerings() {
       </section>
       <section>
         <div className="flex justify-center pb-14 ">
-          <button
-            onClick={handleBooking}
+          <Link
+            href="https://camila-barreto.clientsecure.me"
+            target="_blank"
+            rel="noopener noreferrer"
+            referrerPolicy="no-referrer"
             className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all  font-button "
           >
             {t("services.scheduleAppointment")}
-          </button>
+          </Link>
         </div>
       </section>
     </div>

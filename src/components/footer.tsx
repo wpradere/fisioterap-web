@@ -52,15 +52,18 @@ export default function Footer() {
   return (
     <div>
       <footer className="bg-sand text-brown py-12">
-        <div className="max-w-7xl mx-auto px-5">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="max-w-7xl mx-auto px-2">
+          <div className="grid md:grid-cols-3 gap-3 mb-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4">
-                {t("footer.companyName")}
-              </h3>
-              <p className="text-brown font-button font-bold tracking-wide">
-                {t("footer.license")}
-              </p>
+              <h3 className="text-xl font-semibold mb-4">{t("footer.companyName")}</h3>
+              <ul className="text-brown font-button font-bold tracking-wide list-none">
+                <li>{t("footer.coachName")}</li>
+                <li>{t("footer.license")}</li>
+                <li>{t("footer.address")}</li>
+                <li>{t("footer.city")}</li>
+                <li>{t("footer.phone")}</li>
+                <li>{t("footer.email")}</li>
+              </ul>
             </div>
             <div className="ml-20">
               <h3 className="text-xl font-semibold ">{t("footer.links")}</h3>

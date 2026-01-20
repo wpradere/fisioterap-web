@@ -25,7 +25,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.services": "Offerings",
 
     // Home
-    "home.tagline": "A space for connection and growth.",
+    "home.tagline": "A space for connection and growth",
     "home.intro1": "At Connected Beings Coaching Services, we offer practical skills training and collaborative goal-setting designed to enhance emotional, behavioral, and executive functioning. Our experienced and qualified family coach works with you to build a step-by-step action plan aimed at strengthening relational bonds, improving emotional regulation, cultivating effective parenting practices and navigating life transitions together.",
     "home.intro2": "Conveniently located at Masdar City, we provide a private and welcoming setting for individuals, couples and families who want to improve their overall wellbeing and regain a greater sense of control and confidence in their personal lives.",
     "home.scheduleZoom": "Schedule Zoom",
@@ -40,7 +40,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Services/Offerings
     "services.title": "Offerings",
     "services.moreInfo": "More information →",
-    "services.scheduleAppointment": "Schedule an appointment",
+    "services.scheduleAppointment": "Schedule now",
     "services.individual.title": "Individual Coaching:",
     "services.individual.intro": "Individualized support to increase personal growth and self-discovery through a thought provoking, creative and skill building process",
     "services.individual.subtitle": "Common goals in individual coaching",
@@ -116,11 +116,16 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.zoomMeeting": "Zoom meeting",
 
     // Footer
-    "footer.companyName": "Connected Beings Coaching Services",
-    "footer.license": "Therapist #90005 (USA) Lifestyle Development Consultancy #MC13480 (UAE)",
+    "footer.companyName": "ConnectedBeings",
+    "footer.coachName": "Camila Barreto Family Coach",
+    "footer.license": "Lifestyle Development Consultancy #MC 13480 (UAE)",
+    "footer.address": "Address: MBZUAI, Building 1A, Podium Level, Unit G-12",
+    "footer.city": "Masdar City, Abu Dhabi",
+    "footer.phone": "Phone: (+971) 0505206141",
+    "footer.email": "Email: connectedbeings@gmail.com",
     "footer.links": "Links",
-    "footer.socialMedia": "Social media",
-    "footer.copyright": "© 2025 ConnectedBeings All rights reserved",
+    "footer.socialMedia": "Social Media",
+    "footer.copyright": "© 2024 Connected Beings. All rights reserved.",
   },
   es: {
     // Nav
@@ -149,7 +154,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Services/Offerings
     "services.title": "Servicios",
     "services.moreInfo": "Más información →",
-    "services.scheduleAppointment": "Agendar una cita",
+    "services.scheduleAppointment": "Agendar ahora",
     "services.individual.title": "Coaching Individual:",
     "services.individual.intro": "Apoyo individualizado para aumentar el crecimiento personal y el autodescubrimiento a través de un proceso estimulante, creativo y de desarrollo de habilidades",
     "services.individual.subtitle": "Objetivos comunes en coaching individual",
@@ -225,11 +230,16 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.zoomMeeting": "Reunión Zoom",
 
     // Footer
-    "footer.companyName": "Connected Beings Coaching Services",
-    "footer.license": "Terapeuta #90005 (EE.UU.) Consultoría de Desarrollo de Estilo de Vida #MC13480 (EAU)",
+    "footer.companyName": "ConnectedBeings",
+    "footer.coachName": "Camila Barreto Coach Familiar",
+    "footer.license": "Consultoría de Desarrollo de Estilo de Vida #MC 13480 (EAU)",
+    "footer.address": "Dirección: MBZUAI, Edificio 1A, Nivel Podio, Unidad G-12",
+    "footer.city": "Masdar City, Abu Dhabi",
+    "footer.phone": "Teléfono: (+971) 0505206141",
+    "footer.email": "Correo: connectedbeings@gmail.com",
     "footer.links": "Enlaces",
-    "footer.socialMedia": "Redes sociales",
-    "footer.copyright": "© 2025 ConnectedBeings Todos los derechos reservados",
+    "footer.socialMedia": "Redes Sociales",
+    "footer.copyright": "© 2024 Connected Beings. Todos los derechos reservados.",
   },
 };
 

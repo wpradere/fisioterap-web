@@ -18,7 +18,7 @@ export default function Page() {
             <div className="relative aspect-2/3 bg-linear-to-br from-gray-200 to-gray-300 rounded-xl flex items-center justify-center text-gray-500 overflow-hidden">
               <Image
                 fill
-                src="/IMG_01.png"
+                src="/imagen2.png"
                 alt="Fisioterapia profesional"
                 className="object-cover"
               />

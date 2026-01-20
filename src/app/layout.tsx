@@ -22,8 +22,8 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
-  title: "ConnectectedBeingd App",
-  description: "Coaching Service",
+  title: "ConnectectedBeingd",
+  description: "At Connected Beings Coaching Services, we offer practical skills-training and collaborative goal-setting designed to enhance emotional, behavioral, and executive functioning.",
   icons: {
     icon: "/Favicon - compatibilidad general.svg",
   },
@@ -36,6 +36,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${dreamAvenue.variable} ${lato.variable}`}>
+      <head>
+        <meta name="referrer" content="no-referrer" />
+      </head>
       <body
         className={dreamAvenue.className}
       >

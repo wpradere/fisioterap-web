@@ -55,6 +55,17 @@ export default function Page() {
                 {t("home.whatsapp")}
               </a>
             </div>
+            <div  className="p-2">
+              <Link
+              href="https://camila-barreto.clientsecure.me"
+              target="_blank"
+              rel="noopener noreferrer"
+              referrerPolicy="no-referrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all  font-button "
+            >
+              {t("services.scheduleAppointment")}
+            </Link>
+            </div>
           </div>
         </div>
       </div>

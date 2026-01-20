@@ -1,8 +1,9 @@
-"use client"
+"use client";
 
-import { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import Link from "next/link";
 
 export default function Page() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -13,7 +14,7 @@ export default function Page() {
     { questionKey: "faq.q2", answerKey: "faq.a2" },
     { questionKey: "faq.q3", answerKey: "faq.a3" },
     { questionKey: "faq.q4", answerKey: "faq.a4" },
-    { questionKey: "faq.q5", answerKey: "faq.a5" }
+    { questionKey: "faq.q5", answerKey: "faq.a5" },
   ];
 
   const toggleFAQ = (index: number) => {
@@ -49,14 +50,16 @@ export default function Page() {
                 </span>
                 <ChevronDown
                   className={`w-5 h-5 text-stone-600 shrink-0 transition-transform duration-300 ${
-                    openIndex === index ? 'rotate-180' : ''
+                    openIndex === index ? "rotate-180" : ""
                   }`}
                 />
               </button>
 
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  openIndex === index
+                    ? "max-h-96 opacity-100"
+                    : "max-h-0 opacity-0"
                 }`}
               >
                 <div className="px-6 pb-5 text-sm sm:text-base text-stone-600 leading-relaxed font-button font-bold tracking-wide">
@@ -79,9 +82,18 @@ export default function Page() {
             <button className="px-8 py-3 bg-white text-stone-700 border border-stone-300 rounded-md hover:bg-stone-50 transition-colors duration-300 font-light w-full sm:w-auto">
               {t("home.whatsapp")}
             </button>
+            <Link
+              href="https://camila-barreto.clientsecure.me"
+              target="_blank"
+              rel="noopener noreferrer"
+              referrerPolicy="no-referrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all  font-button "
+            >
+              {t("services.scheduleAppointment")}
+            </Link>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

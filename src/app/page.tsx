@@ -20,7 +20,7 @@ export default function Home() {
               <FlyingLeaves />
             </div>
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-sanddark mb-4 leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-sanddark mb-4 leading-tight text-center">
                 {t("home.tagline")}
               </h1>
               <p className="text-2xl text-sanddark mb-8 font-button font-bold tracking-wide">
@@ -30,10 +30,10 @@ export default function Home() {
                 {t("home.intro2")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 font-light">
-                <Link href={"contact"} className="w-full sm:w-auto">
+                <Link href="https://camila-barreto.clientsecure.me" className="w-full sm:w-auto">
                   <div className="inline-flex w-full items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all font-button">
                     <Video size={20} />
-                    {t("home.scheduleZoom")}
+                    {t("services.scheduleAppointment")}
                   </div>
                 </Link>
                 <a
@@ -47,11 +47,11 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="rounded-2xl p-8 shadow-2xl">
+            <div className="rounded-2xl p-8 shadow-2xl bg-sand">
               <div className="relative aspect-4/3 bg-linear-to-br from-sand to-sand rounded-xl overflow-hidden">
                 <Image
                   fill
-                  src="/imgp.png"
+                  src="/imagen1.png"
                   alt="Fisioterapia profesional"
                   className="object-cover"
                 />

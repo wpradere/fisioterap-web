@@ -51,7 +51,7 @@ export default function Packages() {
                 <li>{t(pkg.priceKey)}</li>
               </ul>
             </div>
-          ))}C
+          ))}
         </div>
       </div>
     </section>
