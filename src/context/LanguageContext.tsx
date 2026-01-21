@@ -33,7 +33,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // About Us
     "about.title": "About Us",
-    "about.intro1": "Welcome. I am Camila Barreto, a psychotherapist and family coach dedicated to providing caring, compassionate and deeply attuned emotional, behavioral and executive functioning support. My mission is to help families alleviate emotional pain while fostering a clearer, more profound awareness of themselves and their life experiences that supports meaningful connection and conscious transformation.",
+    "about.intro1": "My mission is to help families increase emotional regulation while fostering a clearer, more profound awareness of themselves and their life experiences. The ultimate goal is to support meaningful connection and conscious behavioral transformation. Tercer parrafo: private practices",
     "about.intro2": "My approach integrates a multicultural perspective, global worldview and a clinically informed practice. By integrating the warmth and collective values of my Colombian roots with a rigorous clinical training in the United States and a profound respect for the cultural nuances of Middle Eastern life, I offer a reflective space where every family feels truly seen. I am committed to provide family coaching support that honors your heritage, your unique circumstances and strengths, and prioritizes your voice in the healing process.",
     "about.intro3": "I have extensive clinical training and experience treating mood disorders, anxiety disorders, attachment difficulties, traumatic experiences, challenging behaviors in childhood and adolescence, neurodivergent parenting, marital discord, third culture adjustment and family stress. I have worked in a variety of settings including in person and teletherapy private practice, mental health organizations, public and private school settings and after school programs. Drawing on my clinical background, I am committed to integrating evidenced-based methods with a family's inherent inner strengths and wisdom. Whether short term or longer term, I am eager to engage with you in a collaborative way to help you overcome diverse family challenges and to enhance long term growth and connection within your family unit.",
 
@@ -106,17 +106,17 @@ const translations: Record<Language, Record<string, string>> = {
     "faq.q4": "Is coaching confidential?",
     "faq.a4": "Yes, absolutely. All coaching sessions are completely confidential. We maintain strict privacy standards to ensure you feel safe and comfortable sharing openly during our work together. Without written consent, the coach can not share any information to anyone outside the coaching relationship.",
     "faq.q5": "How do I get started?",
-    "faq.a5": "Getting started is easy! Simply click the 'Schedule Now' or 'WhatsApp' button to book your initial free consultation. We'll discuss your needs, answer any questions, and discuss the intake documentation and coaching package that is right for you. After our consultation call, if you decide that coaching is for you, you can schedule your first coaching session where we get to assign long term and short term goals.",
+    "faq.a5": "Getting started is easy! Simply click the 'Schedule Now' or 'WhatsApp' button to book your initial free consultation. We'll discuss your needs, answer any questions, and discuss the intake documentation and coaching package that is right for you. After our consultation call, if you decide that coaching is for you, you can schedule your first coaching session where we get to  to identify shortern and long term goals. ",
 
     // Contact
     "contact.location": "Conveniently located at Masdar City, we provide a private and welcoming setting for individuals, couples and families who want to improve their overall wellbeing and regain a greater sense of control and confidence in their personal lives.",
     "contact.address": "Address: MBZUAI, Building 1A, Podium Level, Unit G-12 (across from Simply Thai) Masdar City, Abu Dhabi",
     "contact.phone": "Phone: (971) 0505206141",
     "contact.email": "Email: connectedbeings@gmail.com",
-    "contact.zoomMeeting": "Zoom meeting",
+    "contact.zoomMeeting": "Schedule Zoom",
 
     // Footer
-    "footer.companyName": "ConnectedBeings",
+    "footer.companyName": "Connected Beings Coaching Services",
     "footer.coachName": "Camila Barreto Family Coach",
     "footer.license": "Lifestyle Development Consultancy #MC 13480 (UAE)",
     "footer.address": "Address: MBZUAI, Building 1A, Podium Level, Unit G-12",
@@ -227,10 +227,10 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.address": "Dirección: MBZUAI, Edificio 1A, Nivel Podio, Unidad G-12 (frente a Simply Thai) Masdar City, Abu Dhabi",
     "contact.phone": "Teléfono: (971) 0505206141",
     "contact.email": "Correo: connectedbeings@gmail.com",
-    "contact.zoomMeeting": "Reunión Zoom",
+    "contact.zoomMeeting": "Agendar Zoom",
 
     // Footer
-    "footer.companyName": "ConnectedBeings",
+    "footer.companyName": "Connected Beings Coaching Services",
     "footer.coachName": "Camila Barreto Coach Familiar",
     "footer.license": "Consultoría de Desarrollo de Estilo de Vida #MC 13480 (EAU)",
     "footer.address": "Dirección: MBZUAI, Edificio 1A, Nivel Podio, Unidad G-12",

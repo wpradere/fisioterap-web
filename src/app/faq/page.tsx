@@ -75,11 +75,11 @@ export default function Page() {
           <p className="text-sanddark mb-6 text-base sm:text-2xl font-button font-bold tracking-wide">
             {t("faq.stillQuestions")}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="px-8 py-3 bg-stone-600 text-white rounded-md hover:bg-stone-700 transition-colors duration-300 font-light w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-4 justify-start items-center">
+            <button className="w-full sm:w-44 h-12 bg-stone-600 text-white rounded-lg hover:bg-stone-700 transition-colors duration-300 font-semibold font-button">
               {t("home.scheduleZoom")}
             </button>
-            <button className="px-8 py-3 bg-white text-stone-700 border border-stone-300 rounded-md hover:bg-stone-50 transition-colors duration-300 font-light w-full sm:w-auto">
+            <button className="w-full sm:w-44 h-12 bg-white text-stone-700 border-2 border-stone-300 rounded-lg hover:bg-stone-50 transition-colors duration-300 font-semibold font-button">
               {t("home.whatsapp")}
             </button>
             <Link
@@ -87,7 +87,7 @@ export default function Page() {
               target="_blank"
               rel="noopener noreferrer"
               referrerPolicy="no-referrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all  font-button "
+              className="inline-flex w-full sm:w-44 h-12 items-center justify-center gap-2 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all font-button"
             >
               {t("services.scheduleAppointment")}
             </Link>

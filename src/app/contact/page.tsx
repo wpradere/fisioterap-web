@@ -40,11 +40,11 @@ export default function Page() {
               <p>{t("contact.email")}</p>
             </div>
           </div>
-          <div className="flex justify-center ">
+          <div className="flex flex-col sm:flex-row justify-start ml-10">
             <div className="p-2">
               <Link
                 href={"/zoom"}
-                className="inline-flex   items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all   font-button"
+                className="inline-flex w-full sm:w-44 h-12 items-center justify-center gap-2 text-white font-semibold bg-stone-600 rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all font-button"
               >
                 <Video size={20} />
                 {t("contact.zoomMeeting")}
@@ -55,22 +55,22 @@ export default function Page() {
                 href={`https://wa.me/${whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-warm-write text-gray-900 font-semibold rounded-lg border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 hover:shadow-md transition-all  font-button"
+                className="inline-flex w-full sm:w-44 h-12 items-center justify-center gap-2 bg-warm-write text-gray-900 font-semibold rounded-lg border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 hover:shadow-md transition-all font-button"
               >
                 <MessageCircle size={20} />
                 {t("home.whatsapp")}
               </a>
             </div>
-            <div  className="p-2">
+            <div className="p-2">
               <Link
-              href="https://camila-barreto.clientsecure.me"
-              target="_blank"
-              rel="noopener noreferrer"
-              referrerPolicy="no-referrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all  font-button "
-            >
-              {t("services.scheduleAppointment")}
-            </Link>
+                href="https://camila-barreto.clientsecure.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                referrerPolicy="no-referrer"
+                className="inline-flex w-full sm:w-44 h-12 items-center justify-center gap-2 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all font-button"
+              >
+                {t("services.scheduleAppointment")}
+              </Link>
             </div>
           </div>
         </div>

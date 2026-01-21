@@ -52,11 +52,11 @@ export default function Footer() {
   return (
     <div>
       <footer className="bg-sand text-brown py-12">
-        <div className="max-w-7xl mx-auto px-2">
-          <div className="grid md:grid-cols-3 gap-3 mb-8">
-            <div>
+        <div className="max-w-7xl mx-auto px-6 sm:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 mb-10">
+            <div className="text-left">
               <h3 className="text-xl font-semibold mb-4">{t("footer.companyName")}</h3>
-              <ul className="text-brown font-button font-bold tracking-wide list-none">
+              <ul className="text-brown font-button font-bold tracking-wide list-none space-y-1">
                 <li>{t("footer.coachName")}</li>
                 <li>{t("footer.license")}</li>
                 <li>{t("footer.address")}</li>
@@ -65,9 +65,9 @@ export default function Footer() {
                 <li>{t("footer.email")}</li>
               </ul>
             </div>
-            <div className="ml-20">
-              <h3 className="text-xl font-semibold ">{t("footer.links")}</h3>
-              <ul className="space-y-1">
+            <div className="text-left md:text-center">
+              <h3 className="text-xl font-semibold mb-4">{t("footer.links")}</h3>
+              <ul className="space-y-2">
                 <li>
                   <Link
                     href={"/"}
@@ -110,28 +110,25 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="text-left">
               <h3 className="text-xl font-semibold mb-4">{t("footer.socialMedia")}</h3>
-              <ul className="space-y-2 text-brown font-button font-bold tracking-wide">
-                <li className="flex  justify-normal space-x-14 mt-9">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.name}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`text-gray-700 dark:text-amber-950 ${social.color} transition-all duration-300 transform hover:scale-125 hover:drop-shadow-lg`}
-                      aria-label={social.name}
-                    >
-                      {social.svg}
-                    </a>
-                  ))}
-                </li>
-              </ul>
+              <div className="flex justify-start space-x-8 mt-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-gray-700 dark:text-amber-950 ${social.color} transition-all duration-300 transform hover:scale-125 hover:drop-shadow-lg`}
+                    aria-label={social.name}
+                  >
+                    {social.svg}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
-          <div className="border-t border-gray-800 pt-8 text-center text-black ">
-            <div></div>
+          <div className="border-t border-gray-800 pt-8 text-center text-black">
             <p className="font-button font-bold tracking-wide">
               {t("footer.copyright")}
             </p>

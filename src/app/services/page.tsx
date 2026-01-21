@@ -100,12 +100,7 @@ export default function Offerings() {
                     ))}
                   </ul>
                 </div>
-                <Link
-                  href="/contact"
-                  className="text-soft-clay font-semibold hover:underline"
-                >
-                  {t("services.moreInfo")}
-                </Link>
+            
               </div>
             ))}
           </div>

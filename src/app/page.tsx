@@ -29,9 +29,9 @@ export default function Home() {
               <p className="text-2xl text-sanddark mb-8 font-button font-bold tracking-wide">
                 {t("home.intro2")}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 font-light">
+              <div className="flex flex-col sm:flex-row gap-4 font-light justify-start">
                 <Link href="https://camila-barreto.clientsecure.me" className="w-full sm:w-auto">
-                  <div className="inline-flex w-full items-center justify-center gap-2 px-6 py-3.5 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all font-button">
+                  <div className="inline-flex w-full sm:w-44 h-12 items-center justify-center gap-2 bg-linear-to-r from-brown to-brown text-white font-semibold rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all font-button">
                     <Video size={20} />
                     {t("services.scheduleAppointment")}
                   </div>
@@ -40,7 +40,7 @@ export default function Home() {
                   href={`https://wa.me/${whatsappNumber}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-3.5 bg-warm-write text-gray-900 font-semibold rounded-lg border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 hover:shadow-md transition-all font-button"
+                  className="inline-flex w-full sm:w-44 h-12 items-center justify-center gap-2 bg-warm-write text-gray-900 font-semibold rounded-lg border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 hover:shadow-md transition-all font-button"
                 >
                   <MessageCircle size={20} />
                   {t("home.whatsapp")}
