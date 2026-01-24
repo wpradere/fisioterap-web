@@ -12,8 +12,8 @@ export default function Page() {
 
   return (
     <div>
-      <div className="flex  justify-center items-center max-w-full mx-auto  p-10 py-20 bg-linear-to-r from-soft-clay to-soft-clay text-white text-center">
-        <div className=" bg-linear-to-br from-sand to-sand rounded-xl overflow-hidden ">
+      <div className="flex flex-col md:flex-row justify-center items-center max-w-full mx-auto p-6 md:p-10 py-20 bg-linear-to-r from-soft-clay to-soft-clay text-white text-center">
+        <div className="bg-linear-to-br from-sand to-sand rounded-xl overflow-hidden w-full md:w-auto mb-8 md:mb-0">
         <Link
           href={"https://maps.app.goo.gl/jiWLdbxgAszPFdob9"}
           target="_blank"
@@ -24,6 +24,7 @@ export default function Page() {
             height={250}
             src="/map.png"
             alt="Fisioterapia profesional"
+            className="w-full h-auto"
           />
         </Link>
         </div>

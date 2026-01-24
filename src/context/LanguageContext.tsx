@@ -115,6 +115,11 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.email": "Email: connectedbeings@gmail.com",
     "contact.zoomMeeting": "Schedule Zoom",
 
+    // Products
+    "products.underConstruction": "Under Construction",
+    "products.comingSoon": "We're working hard to bring you something amazing. Our products page will be available soon!",
+    "products.checkBack": "Please check back later for updates.",
+
     // Footer
     "footer.companyName": "Connected Beings Coaching Services",
     "footer.coachName": "Camila Barreto Family Coach",
@@ -228,6 +233,11 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.phone": "Teléfono: (971) 0505206141",
     "contact.email": "Correo: connectedbeings@gmail.com",
     "contact.zoomMeeting": "Agendar Zoom",
+
+    // Products
+    "products.underConstruction": "En Construcción",
+    "products.comingSoon": "Estamos trabajando para traerte algo increíble. ¡Nuestra página de productos estará disponible pronto!",
+    "products.checkBack": "Por favor, vuelve más tarde para ver las actualizaciones.",
 
     // Footer
     "footer.companyName": "Connected Beings Coaching Services",

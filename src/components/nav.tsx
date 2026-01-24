@@ -69,15 +69,13 @@ export default function Nav() {
                 </button>
                 {isProductsMenuOpen && (
                   <div className="absolute left-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg py-1 min-w-[160px]">
-                    <a
-                      href="https://shopify.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href="/products"
                       onClick={() => setIsProductsMenuOpen(false)}
                       className="block w-full text-left px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-sand transition-colors"
                     >
                       {t("nav.products")}
-                    </a>
+                    </Link>
                   </div>
                 )}
               </div>
@@ -224,10 +222,8 @@ export default function Nav() {
                 </button>
                 {isProductsMenuOpen && (
                   <div className="ml-4 mt-2 space-y-2">
-                    <a
-                      href="https://shopify.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href="/products"
                       onClick={() => {
                         setIsProductsMenuOpen(false);
                         setIsMenuOpen(false);
@@ -235,7 +231,7 @@ export default function Nav() {
                       className="block text-gray-600 hover:text-teal-600 font-medium"
                     >
                       {t("nav.products")}
-                    </a>
+                    </Link>
                   </div>
                 )}
               </div>

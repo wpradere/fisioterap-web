@@ -19,7 +19,7 @@ export default function Home() {
             <div className=" opacity-25 absolute inset-0 overflow-hidden pointer-events-none">
               <FlyingLeaves />
             </div>
-            <div>
+            <div className="order-2 md:order-1">
               <h1 className="text-4xl md:text-5xl font-bold text-sanddark mb-4 leading-tight text-center">
                 {t("home.tagline")}
               </h1>
@@ -47,7 +47,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="rounded-2xl p-8 shadow-2xl bg-sand">
+            <div className="order-1 md:order-2 rounded-2xl p-8 shadow-2xl bg-sand">
               <div className="relative aspect-4/3 bg-linear-to-br from-sand to-sand rounded-xl overflow-hidden">
                 <Image
                   fill
