@@ -1,36 +1,175 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Connected Beings Coaching Services
 
-## Getting Started
+Aplicacion web para servicios de coaching familiar, individual, de parejas y grupal ubicados en Masdar City, Abu Dhabi.
 
-First, run the development server:
+## Descripcion
+
+Connected Beings Coaching Services es una plataforma digital que conecta a familias e individuos con servicios profesionales de coaching. La aplicacion ofrece informacion sobre servicios, paquetes, preguntas frecuentes y multiples formas de contacto.
+
+**Coach:** Camila Barreto - Family Coach
+**Licencia:** Lifestyle Development Consultancy #MC 13480 (UAE)
+**Ubicacion:** Masdar City, Abu Dhabi
+
+## Tecnologias
+
+| Tecnologia | Version | Descripcion |
+|------------|---------|-------------|
+| Next.js | 15.x | Framework de React |
+| TypeScript | 5.x | Lenguaje tipado |
+| Tailwind CSS | 4.x | Framework de estilos |
+| React | 19.x | Biblioteca UI |
+| Lucide React | - | Iconos |
+
+## Instalacion
 
 ```bash
+# Clonar repositorio
+git clone [url-del-repositorio]
+
+# Instalar dependencias
+npm install
+
+# Ejecutar en desarrollo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Construir para produccion
+npm run build
+
+# Ejecutar en produccion
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir [http://localhost:3000](http://localhost:3000) en el navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estructura del Proyecto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/
+│   ├── page.tsx          # Pagina principal
+│   ├── about-us/         # Sobre nosotros
+│   ├── services/         # Servicios/Offerings
+│   ├── packages/         # Paquetes y precios
+│   ├── faq/              # Preguntas frecuentes
+│   ├── contact/          # Contacto
+│   ├── products/         # Productos (en construccion)
+│   └── layout.tsx        # Layout principal
+├── components/
+│   ├── nav.tsx           # Barra de navegacion
+│   ├── footer.tsx        # Pie de pagina
+│   └── FlyingLeaves.tsx  # Efecto visual animado
+├── context/
+│   └── LanguageContext.tsx  # Contexto de idiomas
+└── public/
+    ├── logo3.png         # Logo
+    ├── imagen1.png       # Imagen principal
+    ├── map.png           # Mapa de ubicacion
+    └── documentacion-connected-beings.doc  # Documentacion
+```
 
-## Learn More
+## Caracteristicas Principales
 
-To learn more about Next.js, take a look at the following resources:
+### Sistema Multilenguaje
+- **Idiomas:** Ingles (EN) y Espanol (ES)
+- Selector de idioma en la navegacion
+- Persistencia en localStorage
+- Traducciones completas en todas las paginas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Diseno Responsivo
+- Adaptacion automatica para movil, tablet y desktop
+- Menu hamburguesa en dispositivos moviles
+- Imagenes y elementos que escalan correctamente
+- Reorganizacion de contenido segun pantalla
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Paginas
 
-## Deploy on Vercel
+| Pagina | Ruta | Descripcion |
+|--------|------|-------------|
+| Home | `/` | Bienvenida, descripcion de servicios, botones de accion |
+| About Us | `/about-us` | Informacion sobre la coach y metodologia |
+| Services | `/services` | Tipos de coaching ofrecidos |
+| Packages | `/packages` | Paquetes y precios disponibles |
+| FAQ | `/faq` | Preguntas frecuentes |
+| Contact | `/contact` | Mapa, direccion y formas de contacto |
+| Products | `/products` | Pagina en construccion |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Servicios de Coaching
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Individual** - Crecimiento personal y autodescubrimiento
+2. **Parejas** - Conexion y comunicacion en pareja
+3. **Familiar** - Herramientas para familias
+4. **Grupal** - Sesiones en grupos pequenos
+
+### Paquetes
+
+| Paquete | Sesiones | Precio |
+|---------|----------|--------|
+| Starter | 3 x 60 min | 2800 AED |
+| Short Term | 6 x 60 min | 4800 AED |
+| Ongoing | 10 x 60 min | 7200 AED |
+| Support Groups | 6 x 75 min | 750 AED |
+
+### Integraciones
+
+- **SimplePractice** - Sistema de agendamiento
+- **WhatsApp** - Contacto directo
+- **Google Maps** - Ubicacion del consultorio
+- **Redes Sociales** - Instagram, Facebook
+
+## Componentes
+
+### Nav
+Barra de navegacion con:
+- Logo con enlace a home
+- Links de navegacion
+- Menu desplegable para productos
+- Selector de idioma
+- Menu hamburguesa (movil)
+
+### Footer
+Pie de pagina con:
+- Informacion de contacto
+- Enlaces rapidos
+- Redes sociales (Instagram, Facebook, Email)
+- Copyright
+
+### LanguageContext
+Proveedor de contexto para:
+- Gestion del idioma actual
+- Funcion de traduccion `t()`
+- Persistencia en localStorage
+
+## Paleta de Colores
+
+| Color | Uso |
+|-------|-----|
+| Sand (Arena) | Fondos, tarjetas |
+| Brown (Marron) | Texto, botones principales |
+| Soft Clay | Fondos de secciones |
+| Teal | Hover, acentos |
+| Warm White | Botones secundarios |
+
+## Scripts Disponibles
+
+```bash
+npm run dev      # Servidor de desarrollo
+npm run build    # Construir para produccion
+npm run start    # Ejecutar build de produccion
+npm run lint     # Verificar codigo con ESLint
+```
+
+## Documentacion
+
+El archivo de documentacion completa esta disponible en:
+- **Ruta local:** `public/documentacion-connected-beings.doc`
+- **URL:** `http://localhost:3000/documentacion-connected-beings.doc`
+
+## Contacto
+
+- **Telefono:** (+971) 0505206141
+- **Email:** connectedbeings@gmail.com
+- **Direccion:** MBZUAI, Building 1A, Podium Level, Unit G-12, Masdar City, Abu Dhabi
+
+## Licencia
+
+Proyecto privado - Connected Beings Coaching Services 2026
