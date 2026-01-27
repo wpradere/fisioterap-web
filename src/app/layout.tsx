@@ -22,8 +22,17 @@ const lato = Lato({
 })
 
 export const metadata: Metadata = {
-  title: "ConnectectedBeingd",
-  description: "At Connected Beings Coaching Services, we offer practical skills-training and collaborative goal-setting designed to enhance emotional, behavioral, and executive functioning.",
+  title: "Connected Beings Coaching Services",
+  description: "Our experienced and qualified family coach works with you to build a step-by-step action plan aimed at strengthening relational bonds, improving emotional regulation, and cultivating effective parenting practices. Located in Masdar City, Abu Dhabi.",
+  keywords: "family coaching, coaching familiar, Abu Dhabi, Masdar City, emotional regulation, parenting, couples coaching",
+  authors: [{ name: "Camila Barreto" }],
+  openGraph: {
+    title: "Connected Beings Coaching Services",
+    description: "Family, Individual, Couples and Group Coaching in Masdar City, Abu Dhabi",
+    type: "website",
+    locale: "en_US",
+    siteName: "Connected Beings Coaching Services",
+  },
   icons: {
     icon: "/Favicon - compatibilidad general.svg",
   },
