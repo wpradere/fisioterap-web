@@ -56,7 +56,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-32 mb-10">
             <div className="text-left">
               <h3 className="text-xl font-semibold mb-4">{t("footer.companyName")}</h3>
-              <ul className="text-brown font-button font-bold tracking-wide list-none space-y-1">
+              <ul className="text-brown font-button font-bold tracking-wide list-none text-sm space-y-1">
                 <li>{t("footer.coachName")}</li>
                 <li>{t("footer.license")}</li>
                 <li>{t("footer.address")}</li>

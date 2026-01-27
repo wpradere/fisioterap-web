@@ -35,10 +35,19 @@ export default function Page() {
                 {t("contact.location")}
               </h1>
             </div>
-            <div className="p-10 text-3xl  ">
-              <p>{t("contact.address")}</p>
-              <p>{t("contact.phone")}</p>
-              <p>{t("contact.email")}</p>
+            <div className="p-10 text-lg">
+              <p>
+                <span className="font-dream">{t("contact.addressLabel")}</span>{" "}
+                <span className="font-lato tracking-wide">{t("contact.addressValue")}</span>
+              </p>
+              <p>
+                <span className="font-dream">{t("contact.phoneLabel")}</span>{" "}
+                <span className="font-lato tracking-wide">{t("contact.phoneValue")}</span>
+              </p>
+              <p>
+                <span className="font-dream">{t("contact.emailLabel")}</span>{" "}
+                <span className="font-lato tracking-wide">{t("contact.emailValue")}</span>
+              </p>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row justify-start ml-10">

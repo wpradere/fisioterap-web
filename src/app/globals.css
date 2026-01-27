@@ -17,4 +17,10 @@
   .font-button {
     font-family: var(--font-lato);
   }
+  .font-lato {
+    font-family: var(--font-lato);
+  }
+  .font-dream {
+    font-family: var(--font-dream);
+  }
 }
