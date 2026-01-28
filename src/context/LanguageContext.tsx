@@ -21,7 +21,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.packages": "Packages",
     "nav.products": "Products",
     "nav.qa": "Q&A",
-    "nav.contact": "Contact",
+    "nav.contact": "Contact Us",
     "nav.services": "Offerings",
 
     // Home
@@ -111,7 +111,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Contact
     "contact.location": "Conveniently located at Masdar City, we provide a private and welcoming setting for individuals, couples and families who want to improve their overall wellbeing and regain a greater sense of control and confidence in their personal lives.",
     "contact.addressLabel": "Address:",
-    "contact.addressValue": "MBZUAI, Building 1A, Podium Level, Unit G-12 (across from Simply Thai) Masdar City, Abu Dhabi",
+    "contact.addressValue": "MBZUAI, Building 1A, Podium Level, Unit G-12 (Simply Thai) Masdar City, Abu Dhabi",
     "contact.phoneLabel": "Phone:",
     "contact.phoneValue": "(971) 0505206141",
     "contact.emailLabel": "Email:",
@@ -143,7 +143,7 @@ const translations: Record<Language, Record<string, string>> = {
     "nav.packages": "Paquetes",
     "nav.products": "Productos",
     "nav.qa": "Preguntas",
-    "nav.contact": "Contacto",
+    "nav.contact": "Contáctanos",
     "nav.services": "Servicios",
 
     // Home
@@ -233,7 +233,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Contact
     "contact.location": "Convenientemente ubicados en Masdar City, proporcionamos un entorno privado y acogedor para individuos, parejas y familias que desean mejorar su bienestar general y recuperar un mayor sentido de control y confianza en sus vidas personales.",
     "contact.addressLabel": "Dirección:",
-    "contact.addressValue": "MBZUAI, Edificio 1A, Nivel Podio, Unidad G-12 (frente a Simply Thai) Masdar City, Abu Dhabi",
+    "contact.addressValue": "MBZUAI, Edificio 1A, Nivel Podio, Unidad G-12 (Simply Thai) Masdar City, Abu Dhabi",
     "contact.phoneLabel": "Teléfono:",
     "contact.phoneValue": "(971) 0505206141",
     "contact.emailLabel": "Correo:",
