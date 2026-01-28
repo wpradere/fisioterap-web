@@ -54,9 +54,9 @@ export default function Footer() {
       <footer className="bg-sand text-brown py-6">
         <div className=" mx-auto px-8 sm:px-32  max-w-8xl">
           <div className="flex flex-col md:flex-row flex-wrap gap-10 md:gap-32 mb-10 justify-between">
-            <div className="text-left min-w-max">
-              <h3 className="text-xl font-semibold mb-4">{t("footer.companyName")}</h3>
-              <ul className="text-brown font-button font-bold tracking-wide list-none text-sm space-y-1">
+            <div className="text-left">
+              <h3 className="text-sm sm:text-xl font-semibold mb-4">{t("footer.companyName")}</h3>
+              <ul className="text-brown font-button font-bold tracking-wide list-none text-xs sm:text-sm space-y-1">
                 <li>{t("footer.coachName")}</li>
                 <li>{t("footer.license")}</li>
                 <li>{t("footer.address")}</li>
@@ -66,8 +66,8 @@ export default function Footer() {
               </ul>
             </div>
             <div className="text-left">
-              <h3 className="text-xl font-semibold mb-4">{t("footer.links")}</h3>
-              <ul className="space-y-2">
+              <h3 className="text-sm sm:text-xl font-semibold mb-4">{t("footer.links")}</h3>
+              <ul className="space-y-2 text-xs sm:text-base">
                 <li>
                   <Link
                     href={"/"}
@@ -111,7 +111,7 @@ export default function Footer() {
               </ul>
             </div>
             <div className="text-left">
-              <h3 className="text-xl font-semibold mb-4">{t("footer.socialMedia")}</h3>
+              <h3 className="text-sm sm:text-xl font-semibold mb-4">{t("footer.socialMedia")}</h3>
               <div className="flex justify-start space-x-8 mt-4">
                 {socialLinks.map((social) => (
                   <a
@@ -129,7 +129,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-black">
-            <p className="font-button font-bold tracking-wide">
+            <p className="font-button font-bold tracking-wide text-xs sm:text-base">
               {t("footer.copyright")}
             </p>
           </div>
