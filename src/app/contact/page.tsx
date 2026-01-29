@@ -30,23 +30,23 @@ export default function Page() {
         </div>
         <div className="flex flex-col w-full md:w-auto">
           <div className="text-base sm:text-xl md:text-2xl lg:text-3xl">
-            <div className="p-4 sm:p-6 md:p-10 font-button font-bold">
+            <div className="p-4 sm:p-6 md:p-10 font-button font-bold font-dream">
               <h1>
                 {t("contact.location")}
               </h1>
             </div>
             <div className="p-4 sm:p-6 md:p-10 text-sm sm:text-base md:text-lg">
               <p>
-                <span className="font-dream">{t("contact.addressLabel")}</span>{" "}
-                <span className="font-lato tracking-wide">{t("contact.addressValue")}</span>
+                <span className="font-dream font-bold text-xl">{t("contact.addressLabel")}</span>{" "}
+                <span className="font-dream tracking-wide">{t("contact.addressValue")}</span>
               </p>
               <p>
-                <span className="font-dream">{t("contact.phoneLabel")}</span>{" "}
-                <span className="font-lato tracking-wide">{t("contact.phoneValue")}</span>
+                <span className="font-dream font-bold text-xl">{t("contact.phoneLabel")}</span>{" "}
+                <span className="font-dream tracking-wide">{t("contact.phoneValue")}</span>
               </p>
               <p>
-                <span className="font-dream">{t("contact.emailLabel")}</span>{" "}
-                <span className="font-lato tracking-wide">{t("contact.emailValue")}</span>
+                <span className="font-dream font-bold text-xl">{t("contact.emailLabel")}</span>{" "}
+                <span className="font-dream tracking-wide">{t("contact.emailValue")}</span>
               </p>
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function Page() {
               </Link>
             </div>
             <div className="p-2">
-              <a
+              <Link
                 href={`https://wa.me/${whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -69,7 +69,7 @@ export default function Page() {
               >
                 <MessageCircle size={20} />
                 {t("home.whatsapp")}
-              </a>
+              </Link>
             </div>
             <div className="p-2">
               <Link

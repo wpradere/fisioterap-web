@@ -1,13 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, MessageCircle, Video } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import Link from "next/link";
 
 export default function Page() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const { t } = useLanguage();
+
+    const whatsappNumber = "+971505206141";
 
   const faqs = [
     { questionKey: "faq.q1", answerKey: "faq.a1" },
@@ -76,12 +78,22 @@ export default function Page() {
             {t("faq.stillQuestions")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-start items-center">
-            <button className="w-full sm:w-44 h-12 bg-stone-600 text-white rounded-lg hover:bg-stone-700 transition-colors duration-300 font-semibold font-button">
-              {t("home.scheduleZoom")}
-            </button>
-            <button className="w-full sm:w-44 h-12 bg-white text-stone-700 border-2 border-stone-300 rounded-lg hover:bg-stone-50 transition-colors duration-300 font-semibold font-button">
-              {t("home.whatsapp")}
-            </button>
+            <Link
+              href={"/zoom"}
+              className="inline-flex w-full sm:w-44 h-12 items-center justify-center gap-2 text-white font-semibold bg-stone-600 rounded-lg hover:shadow-lg hover:-translate-y-0.5 transition-all font-button"
+            >
+              <Video size={20} />
+              {t("contact.zoomMeeting")}
+            </Link>
+                <Link
+                href={`https://wa.me/${whatsappNumber}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex w-full sm:w-44 h-12 items-center justify-center gap-2 bg-warm-write text-gray-900 font-semibold rounded-lg border-2 border-gray-300 hover:border-teal-600 hover:text-teal-600 hover:shadow-md transition-all font-button"
+              >
+                <MessageCircle size={20} />
+                {t("home.whatsapp")}
+              </Link>
             <Link
               href="https://camila-barreto.clientsecure.me"
               target="_blank"
