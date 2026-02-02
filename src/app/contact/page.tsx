@@ -22,7 +22,7 @@ export default function Page() {
           <Image
             width={900}
             height={400}
-            src="/map.png"
+            src="/map1.png"
             alt="Mapa de ubicacion"
             className="w-full h-auto"
           />
